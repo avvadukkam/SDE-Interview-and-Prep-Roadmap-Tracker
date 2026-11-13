@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "installCommand": "echo 'Skipping npm install for static web app'",
+  "buildCommand": "echo 'No build step required'",
+  "outputDirectory": "website",
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

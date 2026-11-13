@@ -1,0 +1,3049 @@
+{
+  "metadata": {
+    "title": "SDE Master Learning & Interview Preparation Platform",
+    "repository": "https://github.com/avvadukkam/SDE-Interview-and-Prep-Roadmap-Tracker",
+    "upstreamRepository": "https://github.com/aasthas2022/SDE-Interview-and-Prep-Roadmap",
+    "version": "3.0.0",
+    "lastUpdated": "2026-11-13",
+    "description": "A dependency-driven, beginner-to-advanced Software Development Engineer (SDE) learning platform with Google/Gmail & Email authentication and database persistence."
+  },
+  "readinessRubric": [
+    {
+      "level": 0,
+      "label": "Unfamiliar",
+      "description": "Have not studied the concept yet."
+    },
+    {
+      "level": 1,
+      "label": "Recognize It",
+      "description": "Know the definition and where it fits, but need notes to explain details."
+    },
+    {
+      "level": 2,
+      "label": "Explain with Notes",
+      "description": "Understand mechanics and basic use cases; can walk through with reference material."
+    },
+    {
+      "level": 3,
+      "label": "Explain & Apply Unaided",
+      "description": "Can explain core idea in 1-2 minutes without notes, implement it, and handle edge cases (Target for all Must-Learn P0 topics)."
+    },
+    {
+      "level": 4,
+      "label": "Defend Trade-offs",
+      "description": "Can compare alternatives, analyze time/memory/operational trade-offs, and defend design under interview pressure."
+    }
+  ],
+  "readinessChecklist": [
+    "I can explain the core idea without notes in 1-2 minutes.",
+    "I can name a realistic use case and when not to use it.",
+    "I can compare alternatives and explain time, memory, cost, or operational trade-offs.",
+    "I can describe edge cases, failure modes, and mitigations.",
+    "I can implement it, solve a related problem, or diagram it where applicable.",
+    "I can handle follow-up questions and communicate uncertainty clearly."
+  ],
+  "phases": [
+    {
+      "id": "phase-1",
+      "number": 1,
+      "title": "Phase 1: Programming Foundations",
+      "shortTitle": "Programming Foundations",
+      "subtitle": "Syntax, memory model, OOP basics, recursion, and asymptotic complexity",
+      "difficulty": "Beginner",
+      "estimatedWeeks": "2–3 Weeks",
+      "summary": "Establishes fluency in a core programming language (Python, Java, C++, or Go), execution memory model (Stack vs. Heap), recursion, exception handling, and Big-O complexity analysis before tackling data structures.",
+      "whyThisOrder": "Every data structure, algorithm, and system component is expressed in code. Mastering control flow, memory layout, recursion, and Big-O notation first prevents rote memorization in Phase 2.",
+      "file": "roadmap/phase-1-programming-foundations.md",
+      "topics": [
+        {
+          "id": "p1-prog-fundamentals",
+          "phaseId": "phase-1",
+          "title": "Programming Fundamentals & Language Mechanics",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Beginner",
+          "estimatedHours": 12,
+          "originalSection": "10. Programming Languages and Concepts",
+          "summary": "Covers variables, primitive and reference types, control flow, type systems, and programming paradigms (imperative, procedural, declarative, event-driven).",
+          "whyImportant": "Writing bug-free interview code requires deep familiarity with how your primary language handles types, mutability, pass-by-value vs. reference, and scoping.",
+          "prerequisites": [],
+          "unlocks": [
+            "p1-functions-recursion",
+            "p1-memory-model",
+            "p1-oop-basics",
+            "p1-exception-handling"
+          ],
+          "subtopics": [
+            {
+              "name": "Variables, primitive types, and control flow (conditionals, loops, short-circuiting)",
+              "priority": "P0",
+              "added": true
+            },
+            {
+              "name": "Static vs. Dynamic typing & Strong vs. Weak typing",
+              "priority": "P1"
+            },
+            {
+              "name": "Nominal vs. Structural typing",
+              "priority": "P1"
+            },
+            {
+              "name": "Programming paradigms: Imperative, Procedural, Declarative, and Event-driven",
+              "priority": "P1"
+            },
+            {
+              "name": "Regular expressions: pattern matching, capture groups, and pitfalls",
+              "priority": "P1"
+            }
+          ],
+          "resources": [
+            {
+              "title": "Tech Interview Handbook — Programming Languages for Interviews",
+              "url": "https://www.techinterviewhandbook.org/",
+              "type": "Guide"
+            },
+            {
+              "title": "Coding Interview University — Choose a Language",
+              "url": "https://github.com/jwasham/coding-interview-university",
+              "type": "Roadmap"
+            }
+          ],
+          "exercises": [
+            "Implement custom string/number parsers, FizzBuzz variants, and matrix traversal utilities without library helpers.",
+            "Write a CLI log parser using regular expressions to extract timestamps, severity levels, and error codes."
+          ],
+          "interviewQuestions": [
+            "What is the difference between static/dynamic typing and strong/weak typing? Give examples.",
+            "How does your primary interview language pass primitives vs. objects/arrays to functions?"
+          ],
+          "interviewRelevance": "Tested implicitly in every coding round; interviewers evaluate idiomatic usage of standard library types and mutability rules.",
+          "completionCriteria": "Can write clean loops, conditionals, type conversions, and string manipulations in your primary language without syntax lookups."
+        },
+        {
+          "id": "p1-functions-recursion",
+          "phaseId": "phase-1",
+          "title": "Functions, Call Stack & Functional Concepts",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Beginner",
+          "estimatedHours": 10,
+          "originalSection": "9. Problem-solving and Coding / 10. Programming Languages and Concepts",
+          "summary": "Covers function execution frames, base cases and recursive decomposition, tail recursion, closures, and higher-order functions.",
+          "whyImportant": "Recursion is the direct foundation for trees, graphs, divide-and-conquer, backtracking, and dynamic programming.",
+          "prerequisites": [
+            "p1-prog-fundamentals"
+          ],
+          "unlocks": [
+            "p1-complexity",
+            "p2-searching-sorting",
+            "p2-trees-bst",
+            "p2-backtracking-dp"
+          ],
+          "subtopics": [
+            {
+              "name": "Call stack frames, base cases, and recursive leap of faith",
+              "priority": "P0"
+            },
+            {
+              "name": "Tail recursion and stack overflow prevention",
+              "priority": "P0"
+            },
+            {
+              "name": "Lambda expressions, closures, pure functions, and higher-order functions",
+              "priority": "P1"
+            },
+            {
+              "name": "Referential transparency and immutability",
+              "priority": "P1"
+            },
+            {
+              "name": "Mutual recursion, anonymous recursion, and Lambda calculus basics",
+              "priority": "P2"
+            }
+          ],
+          "resources": [
+            {
+              "title": "NeetCode Roadmap — Core Skills & Recursion",
+              "url": "https://neetcode.io/roadmap",
+              "type": "Interactive"
+            },
+            {
+              "title": "Tech Interview Handbook — Coding Round Prep",
+              "url": "https://github.com/yangshun/tech-interview-handbook",
+              "type": "Repo"
+            }
+          ],
+          "exercises": [
+            "Trace the call stack tree by hand for Fibonacci(5), Factorial(5), and Tower of Hanoi(3).",
+            "Convert 3 recursive functions (sum of digits, array reversal, power function) into iterative and tail-recursive forms."
+          ],
+          "interviewQuestions": [
+            "What happens in memory when a recursive function lacks a reachable base case?",
+            "What is tail-call optimization and why do some languages (like Python/Java) not support it natively?"
+          ],
+          "interviewRelevance": "Essential prerequisite for tree traversals, DFS, divide and conquer, and memoization.",
+          "completionCriteria": "Can trace recursive call trees, identify stack depth, and convert simple recursion to iteration using an explicit stack."
+        },
+        {
+          "id": "p1-memory-model",
+          "phaseId": "phase-1",
+          "title": "Memory Layout & Garbage Collection",
+          "priority": "Should Learn",
+          "priorityCode": "P1",
+          "difficulty": "Beginner",
+          "estimatedHours": 8,
+          "originalSection": "10. Programming Languages and Concepts",
+          "summary": "Explains how programs organize memory across code, data, stack, and heap segments, and how automatic garbage collectors reclaim memory.",
+          "whyImportant": "Understanding stack vs. heap allocation explains pointer semantics, object overhead, memory leaks, and latency spikes in production services.",
+          "prerequisites": [
+            "p1-prog-fundamentals"
+          ],
+          "unlocks": [
+            "p2-arrays-strings",
+            "p2-linked-lists",
+            "p3-os-memory"
+          ],
+          "subtopics": [
+            {
+              "name": "Stack vs. Heap memory allocation and lifetimes",
+              "priority": "P0"
+            },
+            {
+              "name": "Data segment vs. Code segment",
+              "priority": "P1"
+            },
+            {
+              "name": "Manual vs. Automatic memory management",
+              "priority": "P1"
+            },
+            {
+              "name": "Tracing (Mark and Sweep) vs. Reference counting garbage collection",
+              "priority": "P0"
+            },
+            {
+              "name": "Generational Garbage Collection (Young/Old generations, stop-the-world pauses)",
+              "priority": "P1"
+            }
+          ],
+          "resources": [
+            {
+              "title": "Operating Systems: Three Easy Pieces (OSTEP) — Memory API",
+              "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+              "type": "Book"
+            }
+          ],
+          "exercises": [
+            "Create a diagram showing where local variables, object fields, static constants, and closures live in memory.",
+            "Demonstrate a reference cycle in Python/JS and show how a cycle detector or weak reference resolves it."
+          ],
+          "interviewQuestions": [
+            "Compare Stack vs. Heap allocation in terms of speed, fragmentation, thread safety, and lifetime.",
+            "Why can pure reference counting fail to reclaim memory, and how does generational GC optimize collection?"
+          ],
+          "interviewRelevance": "Frequently asked in language deep-dives and backend performance troubleshooting interviews.",
+          "completionCriteria": "Can explain stack vs. heap trade-offs and compare reference counting with generational mark-and-sweep GC."
+        },
+        {
+          "id": "p1-oop-basics",
+          "phaseId": "phase-1",
+          "title": "Object-Oriented Programming (OOP) Foundations",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Beginner",
+          "estimatedHours": 10,
+          "originalSection": "10. Programming Languages and Concepts / 6. Low-Level Design",
+          "summary": "Covers classes, objects, interfaces, encapsulation, abstraction, inheritance, polymorphism, and composition vs. inheritance.",
+          "whyImportant": "OOP provides the vocabulary for structuring modular code and is the direct prerequisite for Low-Level Design (Phase 5).",
+          "prerequisites": [
+            "p1-prog-fundamentals"
+          ],
+          "unlocks": [
+            "p4-clean-code-solid",
+            "p5-ood-modeling"
+          ],
+          "subtopics": [
+            {
+              "name": "Classes, objects, constructors, interfaces, and abstract classes",
+              "priority": "P0"
+            },
+            {
+              "name": "Encapsulation and access modifiers (state hiding & invariants)",
+              "priority": "P0"
+            },
+            {
+              "name": "Abstraction and interface contracts",
+              "priority": "P0"
+            },
+            {
+              "name": "Inheritance and Polymorphism (compile-time overloading vs. runtime overriding)",
+              "priority": "P0"
+            },
+            {
+              "name": "Composition vs. Inheritance: why to favor composition over deep class hierarchies",
+              "priority": "P0"
+            }
+          ],
+          "resources": [
+            {
+              "title": "Refactoring.Guru — OOP & Design Principles",
+              "url": "https://refactoring.guru/design-patterns",
+              "type": "Guide"
+            }
+          ],
+          "exercises": [
+            "Model a bank account hierarchy (Checking, Savings, Investment) and refactor an inheritance-heavy design to use composition.",
+            "Implement polymorphic payment processors using interfaces/abstract base classes."
+          ],
+          "interviewQuestions": [
+            "What is the difference between an abstract class and an interface, and when do you choose each?",
+            "Why is 'favor composition over inheritance' considered a core rule in modern software design?"
+          ],
+          "interviewRelevance": "Direct foundation for all Low-Level Design (LLD) and Object-Oriented Design rounds.",
+          "completionCriteria": "Can design clean class hierarchies, use interfaces for polymorphism, and refactor brittle inheritance into composition."
+        },
+        {
+          "id": "p1-exception-handling",
+          "phaseId": "phase-1",
+          "title": "Error Handling, Exceptions & Debugging Basics",
+          "priority": "Should Learn",
+          "priorityCode": "P1",
+          "difficulty": "Beginner",
+          "estimatedHours": 6,
+          "originalSection": "9. Problem-solving and Coding / 10. Programming Languages and Concepts",
+          "summary": "Covers exception hierarchies, error propagation, resource cleanup (try/finally/context managers), exceptions vs. error codes, and systematic debugging.",
+          "whyImportant": "Production-grade code and LLD solutions require predictable error handling, invariant validation, and fast root-cause debugging.",
+          "prerequisites": [
+            "p1-prog-fundamentals"
+          ],
+          "unlocks": [
+            "p4-testing-debugging",
+            "p5-lld-api-concurrency"
+          ],
+          "subtopics": [
+            {
+              "name": "Exception handling mechanisms (try/catch/finally, context managers)",
+              "priority": "P1"
+            },
+            {
+              "name": "Error propagation, custom domain exceptions, and error recovery",
+              "priority": "P1"
+            },
+            {
+              "name": "Exceptions vs. Error codes / Result types & exception safety",
+              "priority": "P1"
+            },
+            {
+              "name": "Debugging techniques: interactive debuggers, breakpoints, print/log debugging, rubber ducking",
+              "priority": "P1"
+            }
+          ],
+          "resources": [
+            {
+              "title": "Tech Interview Handbook — Coding Best Practices",
+              "url": "https://www.techinterviewhandbook.org/",
+              "type": "Guide"
+            }
+          ],
+          "exercises": [
+            "Write a file/socket reader with guaranteed resource cleanup under partial failure conditions.",
+            "Debug 5 buggy array/recursion programs using an interactive step debugger."
+          ],
+          "interviewQuestions": [
+            "When should a function throw an exception versus returning an error value or status object?",
+            "How do you prevent resource leaks when an exception occurs mid-operation?"
+          ],
+          "interviewRelevance": "Interviewers look for defensive input checks and clean failure handling in coding and LLD interviews.",
+          "completionCriteria": "Consistently validates inputs, handles edge cases cleanly, and uses step debugging effectively."
+        },
+        {
+          "id": "p1-complexity",
+          "phaseId": "phase-1",
+          "title": "Problem-Solving Strategy & Time/Space Complexity",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Beginner",
+          "estimatedHours": 10,
+          "originalSection": "9. Problem-solving and Coding",
+          "summary": "Covers asymptotic analysis (Big-O, Big-Omega, Big-Theta), worst/average/amortized complexity, auxiliary space vs. input space, and structured problem-solving steps.",
+          "whyImportant": "Every coding interview ends with a complexity analysis; Big-O determines whether an algorithm scales or times out.",
+          "prerequisites": [
+            "p1-prog-fundamentals",
+            "p1-functions-recursion"
+          ],
+          "unlocks": [
+            "p2-arrays-strings",
+            "p2-linked-lists",
+            "p2-hash-tables",
+            "p2-searching-sorting"
+          ],
+          "subtopics": [
+            {
+              "name": "Big O (upper bound), Big Omega (lower bound), and Big Theta (tight bound) notations",
+              "priority": "P0"
+            },
+            {
+              "name": "Time complexity of loops, nested loops, and recursive recurrence relations",
+              "priority": "P0"
+            },
+            {
+              "name": "Space complexity analysis: auxiliary heap space vs. recursion call stack space",
+              "priority": "P0"
+            },
+            {
+              "name": "Space-time trade-offs and amortized complexity (e.g., dynamic array resizing)",
+              "priority": "P1"
+            },
+            {
+              "name": "Structured problem-solving: Understand -> Plan -> Break down -> Solve simpler -> Implement -> Test",
+              "priority": "P1"
+            }
+          ],
+          "resources": [
+            {
+              "title": "NeetCode Roadmap — Big-O & Problem Solving",
+              "url": "https://neetcode.io/roadmap",
+              "type": "Interactive"
+            },
+            {
+              "title": "Tech Interview Handbook — Cheatsheets & Complexity",
+              "url": "https://www.techinterviewhandbook.org/",
+              "type": "Guide"
+            }
+          ],
+          "exercises": [
+            "Analyze time and auxiliary space complexity for 10 code snippets including binary search, merge sort, and branching recursion.",
+            "Prove why dynamic array append is O(1) amortized despite O(N) occasional resizing."
+          ],
+          "interviewQuestions": [
+            "What is the time and space complexity of a recursive function with branching factor 2 and depth N?",
+            "Explain amortized O(1) time complexity using dynamic arrays or two-stack queues."
+          ],
+          "interviewRelevance": "Mandatory in 100% of DSA and coding interviews.",
+          "completionCriteria": "Can state and justify exact time and space complexity (including recursion stack) for any code you write."
+        }
+      ]
+    },
+    {
+      "id": "phase-2",
+      "number": 2,
+      "title": "Phase 2: Data Structures and Algorithms",
+      "shortTitle": "Data Structures & Algorithms",
+      "subtitle": "Linear structures, hashing, sorting, trees, heaps, graphs, and algorithmic paradigms",
+      "difficulty": "Intermediate",
+      "estimatedWeeks": "6–8 Weeks",
+      "summary": "Consolidated and properly sequenced from the original repository's separate 'Algorithms' (Section 2), 'Data Structures' (Section 4), and 'Problem-solving and Coding' (Section 9) sections so each data structure is learned before the algorithms that depend on it.",
+      "whyThisOrder": "Linear structures (Arrays, Linked Lists, Stacks, Queues, Hash Tables) must precede Searching/Sorting and hierarchical structures (Trees, Heaps, Tries), which in turn unlock Graphs, Greedy, Backtracking, and Dynamic Programming.",
+      "file": "roadmap/phase-2-data-structures-and-algorithms.md",
+      "topics": [
+        {
+          "id": "p2-arrays-strings",
+          "phaseId": "phase-2",
+          "title": "Arrays, Strings & Two-Pointer / Sliding Window Patterns",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Beginner",
+          "estimatedHours": 16,
+          "originalSection": "4. Data Structures / 2. Algorithms / 9. Problem-solving and Coding",
+          "summary": "Covers contiguous memory arrays, dynamic arrays, string manipulation, prefix sums, two pointers, sliding window, and Kadane's algorithm.",
+          "whyImportant": "Arrays and strings account for over 35% of SDE coding interview questions and form the backing storage for hash tables and heaps.",
+          "prerequisites": [
+            "p1-memory-model",
+            "p1-complexity"
+          ],
+          "unlocks": [
+            "p2-linked-lists",
+            "p2-stacks-queues",
+            "p2-hash-tables",
+            "p2-searching-sorting",
+            "p2-advanced-dsa"
+          ],
+          "subtopics": [
+            {
+              "name": "Static vs. Dynamic arrays, contiguous memory indexing, and 2D matrices",
+              "priority": "P0"
+            },
+            {
+              "name": "Two Pointers pattern (opposite ends, same direction, partitioning)",
+              "priority": "P0"
+            },
+            {
+              "name": "Sliding Window pattern (fixed and variable length windows)",
+              "priority": "P0"
+            },
+            {
+              "name": "Maximum Subarray Sum (Kadane's Algorithm) and Prefix Sums",
+              "priority": "P0"
+            },
+            {
+              "name": "String fundamentals: Palindrome check, anagram check, immutability, StringBuilder",
+              "priority": "P0"
+            }
+          ],
+          "resources": [
+            {
+              "title": "NeetCode Roadmap — Arrays & Hashing / Two Pointers / Sliding Window",
+              "url": "https://neetcode.io/roadmap",
+              "type": "Interactive"
+            },
+            {
+              "title": "Tech Interview Handbook — Array & String Cheatsheet",
+              "url": "https://www.techinterviewhandbook.org/",
+              "type": "Guide"
+            }
+          ],
+          "exercises": [
+            "Solve Two Sum II, 3Sum, Container With Most Water, and Trapping Rain Water using Two Pointers.",
+            "Solve Longest Substring Without Repeating Characters and Minimum Window Substring using Sliding Window.",
+            "Solve Maximum Subarray (Kadane's Algorithm) and Product of Array Except Self."
+          ],
+          "interviewQuestions": [
+            "When can a nested O(N^2) subarray loop be reduced to O(N) with a sliding window, and when does sliding window fail (e.g., negative numbers)?",
+            "How does Kadane's algorithm handle an array containing all negative numbers?"
+          ],
+          "interviewRelevance": "Highest-frequency category in online assessments and phone screens.",
+          "completionCriteria": "Can immediately recognize and code Two Pointers, Sliding Window, and Prefix Sum solutions in O(N) time."
+        },
+        {
+          "id": "p2-linked-lists",
+          "phaseId": "phase-2",
+          "title": "Linked Lists & Pointer Manipulation",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Beginner",
+          "estimatedHours": 10,
+          "originalSection": "4. Data Structures / 9. Problem-solving and Coding",
+          "summary": "Covers singly, doubly, and circular linked lists, dummy head nodes, in-place reversal, and Floyd's fast-and-slow pointer cycle detection.",
+          "whyImportant": "Tests pointer precision and underpins LRU caches, hash table chaining, deque implementations, and OS free-lists.",
+          "prerequisites": [
+            "p1-memory-model",
+            "p2-arrays-strings"
+          ],
+          "unlocks": [
+            "p2-stacks-queues",
+            "p2-hash-tables",
+            "p2-trees-bst",
+            "p5-lld-problems"
+          ],
+          "subtopics": [
+            {
+              "name": "Singly linked lists, Doubly linked lists, and Circular linked lists",
+              "priority": "P0"
+            },
+            {
+              "name": "Fast and slow pointers (Floyd's Tortoise and Hare cycle detection & middle finding)",
+              "priority": "P0"
+            },
+            {
+              "name": "In-place reversal, merging sorted lists, and dummy sentinel nodes",
+              "priority": "P0"
+            },
+            {
+              "name": "Skip lists (probabilistic O(log N) search)",
+              "priority": "P1"
+            },
+            {
+              "name": "Unrolled linked lists & Lock-free linked lists (moved from P0 to Optional/Advanced P2)",
+              "priority": "P2"
+            }
+          ],
+          "resources": [
+            {
+              "title": "NeetCode Roadmap — Linked List",
+              "url": "https://neetcode.io/roadmap",
+              "type": "Interactive"
+            }
+          ],
+          "exercises": [
+            "Implement Singly and Doubly Linked Lists from scratch with O(1) head/tail operations.",
+            "Solve Reverse Linked List, Merge Two Sorted Lists, Linked List Cycle II, and Reorder List."
+          ],
+          "interviewQuestions": [
+            "Prove mathematically why Floyd's fast and slow pointers are guaranteed to meet inside a cycle.",
+            "Why does an LRU Cache combine a Doubly Linked List with a Hash Map?"
+          ],
+          "interviewRelevance": "Core staple of coding interviews and required to build LRU/LFU caches in LLD.",
+          "completionCriteria": "Can manipulate list pointers without losing references or triggering null-pointer bugs."
+        },
+        {
+          "id": "p2-stacks-queues",
+          "phaseId": "phase-2",
+          "title": "Stacks, Queues & Monotonic Structures",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Beginner",
+          "estimatedHours": 10,
+          "originalSection": "4. Data Structures",
+          "summary": "Covers LIFO stacks, FIFO queues, circular queues, double-ended queues (Deques), expression evaluation, and monotonic stacks/queues.",
+          "whyImportant": "Stacks power DFS, backtracking, and parsing; queues power BFS, rate buffers, and asynchronous task scheduling.",
+          "prerequisites": [
+            "p2-arrays-strings",
+            "p2-linked-lists"
+          ],
+          "unlocks": [
+            "p2-trees-bst",
+            "p2-graphs"
+          ],
+          "subtopics": [
+            {
+              "name": "Stack implementations (array-based and linked-list-based) & expression evaluation",
+              "priority": "P0"
+            },
+            {
+              "name": "Queue implementations, Circular queue, and BFS/scheduling applications",
+              "priority": "P0"
+            },
+            {
+              "name": "Double-ended queue (Deque) and sliding window maximum",
+              "priority": "P1"
+            },
+            {
+              "name": "Monotonic Stack (Next Greater Element, Daily Temperatures, Largest Rectangle in Histogram)",
+              "priority": "P0",
+              "added": true
+            },
+            {
+              "name": "Priority stacks",
+              "priority": "P2"
+            }
+          ],
+          "resources": [
+            {
+              "title": "NeetCode Roadmap — Stack",
+              "url": "https://neetcode.io/roadmap",
+              "type": "Interactive"
+            }
+          ],
+          "exercises": [
+            "Solve Valid Parentheses, Min Stack, Evaluate Reverse Polish Notation, and Next Greater Element.",
+            "Implement a Queue using two Stacks (amortized O(1)) and a Circular Ring Buffer."
+          ],
+          "interviewQuestions": [
+            "How does a Monotonic Stack find the Next Greater Element for all N elements in O(N) time?",
+            "How do you implement a fixed-capacity Circular Queue using an array without wasting a slot?"
+          ],
+          "interviewRelevance": "Frequently tested via Monotonic Stack and Deque sliding-window problems.",
+          "completionCriteria": "Can implement stack/queue ADTs and solve monotonic stack problems in O(N) time."
+        },
+        {
+          "id": "p2-hash-tables",
+          "phaseId": "phase-2",
+          "title": "Hash Tables & Probabilistic Data Structures",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Intermediate",
+          "estimatedHours": 10,
+          "originalSection": "4. Data Structures / 2. Algorithms / 9. Problem-solving and Coding",
+          "summary": "Covers hash functions, load factors, collision resolution (chaining vs. open addressing), and space-efficient probabilistic structures (Bloom Filters, Count-Min Sketch).",
+          "whyImportant": "Hash tables turn O(N) searches into O(1) lookups in coding problems and underpin database hash indexes and distributed caches.",
+          "prerequisites": [
+            "p2-arrays-strings",
+            "p2-linked-lists"
+          ],
+          "unlocks": [
+            "p2-trees-bst",
+            "p2-graphs",
+            "p3-dbms-sql",
+            "p6-caching-queues"
+          ],
+          "subtopics": [
+            {
+              "name": "Hash functions, uniform distribution, load factor, and rehashing",
+              "priority": "P0"
+            },
+            {
+              "name": "Collision resolution: Separate Chaining vs. Open Addressing (linear/quadratic probing)",
+              "priority": "P0"
+            },
+            {
+              "name": "Robin Hood Hashing & Cuckoo Hashing (reclassified from P0 to P1/P2)",
+              "priority": "P1"
+            },
+            {
+              "name": "Bloom Filters (false positive trade-offs) & Count-Min Sketch for high-scale systems",
+              "priority": "P2"
+            },
+            {
+              "name": "Perfect Hashing",
+              "priority": "P2"
+            }
+          ],
+          "resources": [
+            {
+              "title": "NeetCode Roadmap — Arrays & Hashing",
+              "url": "https://neetcode.io/roadmap",
+              "type": "Interactive"
+            }
+          ],
+          "exercises": [
+            "Implement a generic Hash Map from scratch with dynamic resizing and separate chaining.",
+            "Solve Group Anagrams, Top K Frequent Elements, Longest Consecutive Sequence, and Subarray Sum Equals K."
+          ],
+          "interviewQuestions": [
+            "What happens to Hash Map lookup complexity in the worst case, and how did Java 8+ mitigate hash collision attacks?",
+            "How does a Bloom Filter work, why can you not delete keys from a basic Bloom Filter, and where is it used in databases?"
+          ],
+          "interviewRelevance": "Used in almost every coding interview and frequently discussed in HLD caching/storage rounds.",
+          "completionCriteria": "Can implement a hash table from scratch and use hash maps/sets to optimize O(N^2) lookups to O(N)."
+        },
+        {
+          "id": "p2-searching-sorting",
+          "phaseId": "phase-2",
+          "title": "Searching, Sorting & Divide-and-Conquer",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Intermediate",
+          "estimatedHours": 14,
+          "originalSection": "2. Algorithms",
+          "summary": "Covers binary search on sorted arrays and monotonic answer spaces, comparison sorts (Merge, Quick, Heap, TimSort), non-comparison sorts (Counting, Radix, Bucket), and Divide & Conquer.",
+          "whyImportant": "Binary search and sorting are fundamental building blocks for interval merging, greedy algorithms, and database index scans.",
+          "prerequisites": [
+            "p1-functions-recursion",
+            "p1-complexity",
+            "p2-arrays-strings"
+          ],
+          "unlocks": [
+            "p2-trees-bst",
+            "p2-heaps-pq",
+            "p2-greedy",
+            "p3-db-indexing"
+          ],
+          "subtopics": [
+            {
+              "name": "Binary Search (1D/2D arrays, Peak Element, Rotated Sorted Array, Binary Search on Answer)",
+              "priority": "P0"
+            },
+            {
+              "name": "Merge Sort (stable O(N log N)), Quick Sort (partitioning & pivot selection), and QuickSelect",
+              "priority": "P0"
+            },
+            {
+              "name": "Insertion Sort, Selection Sort, Bubble Sort, and hybrid Tim Sort",
+              "priority": "P1"
+            },
+            {
+              "name": "Non-comparison sorts: Counting Sort, Radix Sort, and Bucket Sort",
+              "priority": "P1"
+            },
+            {
+              "name": "Exponential/Ternary Search & Closest Pair of Points (Divide & Conquer)",
+              "priority": "P1"
+            },
+            {
+              "name": "Academic sorts & D&C: Strassen's Matrix, Karatsuba, FFT, Shell/Bitonic/Cycle/Pancake Sort",
+              "priority": "P2"
+            }
+          ],
+          "resources": [
+            {
+              "title": "NeetCode Roadmap — Binary Search",
+              "url": "https://neetcode.io/roadmap",
+              "type": "Interactive"
+            },
+            {
+              "title": "Tech Interview Handbook — Sorting & Searching",
+              "url": "https://www.techinterviewhandbook.org/",
+              "type": "Guide"
+            }
+          ],
+          "exercises": [
+            "Implement Merge Sort, Quick Sort, and Binary Search (lower_bound and upper_bound) without off-by-one errors.",
+            "Solve Search in Rotated Sorted Array, Find Peak Element, Koko Eating Bananas, and Merge Intervals."
+          ],
+          "interviewQuestions": [
+            "Why is Quick Sort often faster in practice than Merge Sort for in-memory arrays, yet Merge Sort is preferred for external disk sorting?",
+            "How do you recognize when an optimization problem can be solved via 'Binary Search on Answer'?"
+          ],
+          "interviewRelevance": "Binary search variants and interval sorting are top-tier coding interview topics.",
+          "completionCriteria": "Can write bug-free binary search on boundary conditions and explain stability, in-place, and time complexity of major sorts."
+        },
+        {
+          "id": "p2-trees-bst",
+          "phaseId": "phase-2",
+          "title": "Trees, Binary Search Trees & Balanced Search Trees",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Intermediate",
+          "estimatedHours": 16,
+          "originalSection": "4. Data Structures",
+          "summary": "Covers binary trees, DFS (preorder, inorder, postorder) and BFS (level-order) traversals, Binary Search Trees (BST), self-balancing trees (AVL, Red-Black), and B/B+ Trees.",
+          "whyImportant": "Trees model hierarchical data (DOM, file systems, ASTs) and database indexes (B-Trees/LSM-Trees), and are heavily tested in interviews.",
+          "prerequisites": [
+            "p1-functions-recursion",
+            "p2-stacks-queues",
+            "p2-searching-sorting"
+          ],
+          "unlocks": [
+            "p2-heaps-pq",
+            "p2-graphs",
+            "p2-advanced-dsa",
+            "p3-db-indexing"
+          ],
+          "subtopics": [
+            {
+              "name": "Binary Trees: Complete, Full, and Perfect binary trees; DFS & BFS level-order traversals",
+              "priority": "P0"
+            },
+            {
+              "name": "Binary Search Trees (BST): validation, insertion, deletion, Lowest Common Ancestor (LCA)",
+              "priority": "P0"
+            },
+            {
+              "name": "Self-balancing BSTs: AVL Trees (rotations) and Red-Black Trees (invariants)",
+              "priority": "P1"
+            },
+            {
+              "name": "B-Trees and B+ Trees (disk-page alignment and database indexing foundation)",
+              "priority": "P0"
+            },
+            {
+              "name": "Advanced tree variants: Splay Trees, Radix Trees, Scapegoat Trees, Tango Trees",
+              "priority": "P2"
+            }
+          ],
+          "resources": [
+            {
+              "title": "NeetCode Roadmap — Trees",
+              "url": "https://neetcode.io/roadmap",
+              "type": "Interactive"
+            }
+          ],
+          "exercises": [
+            "Solve Invert Binary Tree, Maximum Depth, Diameter of Binary Tree, Binary Tree Level Order Traversal, Validate BST, and Lowest Common Ancestor.",
+            "Implement BST serialize/deserialize and iterative inorder traversal using an explicit stack."
+          ],
+          "interviewQuestions": [
+            "What property makes an inorder traversal of a valid BST sorted, and how do you validate a BST in O(N) time?",
+            "Why do relational databases use B+ Trees instead of AVL or Red-Black binary trees for disk indexes?"
+          ],
+          "interviewRelevance": "Trees are among the top 3 most tested topics in FAANG coding rounds.",
+          "completionCriteria": "Can solve recursive and iterative tree traversal problems and explain BST balancing and B+ Tree branching."
+        },
+        {
+          "id": "p2-heaps-pq",
+          "phaseId": "phase-2",
+          "title": "Heaps, Priority Queues & Top-K Patterns",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Intermediate",
+          "estimatedHours": 8,
+          "originalSection": "4. Data Structures / 2. Algorithms",
+          "summary": "Covers binary min-heaps and max-heaps, array representation of complete binary trees, O(N) heapify, Heap Sort, and Two-Heap / Top-K patterns.",
+          "whyImportant": "Heaps enable O(log N) priority scheduling, Top-K streaming queries, Median maintenance, and Dijkstra's / Prim's graph algorithms.",
+          "prerequisites": [
+            "p2-arrays-strings",
+            "p2-trees-bst"
+          ],
+          "unlocks": [
+            "p2-graphs",
+            "p2-greedy",
+            "p3-os-processes"
+          ],
+          "subtopics": [
+            {
+              "name": "Min-Heap and Max-Heap array indexing, sift-up, sift-down, and O(N) build-heap",
+              "priority": "P0"
+            },
+            {
+              "name": "Heap Sort (in-place O(N log N) sorting)",
+              "priority": "P0"
+            },
+            {
+              "name": "Top-K elements, K-way merge, and Two-Heaps pattern (Find Median from Data Stream)",
+              "priority": "P0"
+            }
+          ],
+          "resources": [
+            {
+              "title": "NeetCode Roadmap — Heap / Priority Queue",
+              "url": "https://neetcode.io/roadmap",
+              "type": "Interactive"
+            }
+          ],
+          "exercises": [
+            "Implement a binary Min-Heap from scratch using a dynamic array.",
+            "Solve Kth Largest Element in an Array, Merge K Sorted Lists, Task Scheduler, and Find Median from Data Stream."
+          ],
+          "interviewQuestions": [
+            "Why does building a heap from an unsorted array of N elements take O(N) time instead of O(N log N)?",
+            "To find the K largest elements in a stream of N items, why do you use a Min-Heap of size K instead of a Max-Heap?"
+          ],
+          "interviewRelevance": "Essential for Top-K, streaming median, scheduling, and shortest-path graph problems.",
+          "completionCriteria": "Can implement a binary heap and solve Top-K, K-way merge, and Two-Heap streaming problems."
+        },
+        {
+          "id": "p2-graphs",
+          "phaseId": "phase-2",
+          "title": "Graphs, Traversals, Shortest Paths & Spanning Trees",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Intermediate",
+          "estimatedHours": 18,
+          "originalSection": "4. Data Structures / 2. Algorithms / 7. Networking",
+          "summary": "Unifies graph representations, BFS/DFS traversals, cycle detection, topological sorting, Union-Find (DSU), shortest paths (Dijkstra, Bellman-Ford, Floyd-Warshall), and MSTs (Kruskal, Prim).",
+          "whyImportant": "Graphs model networks, dependencies, social graphs, and routing; they bridge core DSA and distributed system topology.",
+          "prerequisites": [
+            "p2-stacks-queues",
+            "p2-hash-tables",
+            "p2-trees-bst",
+            "p2-heaps-pq"
+          ],
+          "unlocks": [
+            "p2-greedy",
+            "p2-backtracking-dp",
+            "p3-networking"
+          ],
+          "subtopics": [
+            {
+              "name": "Graph representations (Adjacency List, Adjacency Matrix, Edge List) & Directed/Undirected/Weighted/Bipartite graphs",
+              "priority": "P0"
+            },
+            {
+              "name": "Graph Traversals (BFS & DFS), Connected Components, and Cycle Detection (directed & undirected)",
+              "priority": "P0"
+            },
+            {
+              "name": "Topological Sorting (Kahn's BFS in-degree algorithm & DFS postorder) and Disjoint Set Union (Union-Find)",
+              "priority": "P0",
+              "added": true
+            },
+            {
+              "name": "Shortest Path Algorithms: Dijkstra's (non-negative weights), Bellman-Ford (negative weights), Floyd-Warshall (all-pairs)",
+              "priority": "P0"
+            },
+            {
+              "name": "Minimum Spanning Trees (MST): Kruskal's Algorithm and Prim's Algorithm",
+              "priority": "P0"
+            },
+            {
+              "name": "Planar/Eulerian graphs, Incidence matrix, and Kosaraju's Strongly Connected Components",
+              "priority": "P2"
+            }
+          ],
+          "resources": [
+            {
+              "title": "NeetCode Roadmap — Graphs & Advanced Graphs",
+              "url": "https://neetcode.io/roadmap",
+              "type": "Interactive"
+            }
+          ],
+          "exercises": [
+            "Solve Number of Islands, Clone Graph, Course Schedule I & II (Topological Sort), Redundant Connection (Union-Find), and Network Delay Time (Dijkstra).",
+            "Implement Union-Find with path compression and union by rank."
+          ],
+          "interviewQuestions": [
+            "When should you use BFS vs. Dijkstra's vs. Bellman-Ford for shortest paths?",
+            "How do you detect a cycle in a directed graph versus an undirected graph?"
+          ],
+          "interviewRelevance": "Grid BFS/DFS, Topological Sort, Union-Find, and Dijkstra appear heavily in mid-to-senior SDE interviews.",
+          "completionCriteria": "Can fluently code BFS, DFS, Kahn's Topological Sort, Union-Find, and Dijkstra's algorithm."
+        },
+        {
+          "id": "p2-greedy",
+          "phaseId": "phase-2",
+          "title": "Greedy Algorithms & Interval Scheduling",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Intermediate",
+          "estimatedHours": 8,
+          "originalSection": "2. Algorithms / 9. Problem-solving and Coding",
+          "summary": "Covers greedy-choice property, optimal substructure, interval scheduling, Fractional Knapsack, Huffman coding, and exchange arguments.",
+          "whyImportant": "Greedy algorithms yield fast O(N log N) or O(N) solutions when local optimal choices guarantee global optimality.",
+          "prerequisites": [
+            "p2-searching-sorting",
+            "p2-heaps-pq"
+          ],
+          "unlocks": [
+            "p2-backtracking-dp"
+          ],
+          "subtopics": [
+            {
+              "name": "Greedy choice property vs. Dynamic Programming; Fractional Knapsack Problem",
+              "priority": "P0"
+            },
+            {
+              "name": "Activity Selection Problem, Job Sequencing with Deadlines, and Interval Scheduling",
+              "priority": "P1"
+            },
+            {
+              "name": "Huffman Coding (prefix-free compression trees)",
+              "priority": "P1"
+            },
+            {
+              "name": "Greedy Set Cover and Greedy Graph Coloring approximations",
+              "priority": "P2"
+            }
+          ],
+          "resources": [
+            {
+              "title": "NeetCode Roadmap — Greedy & Intervals",
+              "url": "https://neetcode.io/roadmap",
+              "type": "Interactive"
+            }
+          ],
+          "exercises": [
+            "Solve Jump Game I & II, Non-overlapping Intervals, Meeting Rooms II, and Gas Station."
+          ],
+          "interviewQuestions": [
+            "Why does a greedy approach work for Fractional Knapsack and Activity Selection, but fail for 0/1 Knapsack and arbitrary Coin Change?",
+            "How do you prove a greedy algorithm is optimal using an exchange argument?"
+          ],
+          "interviewRelevance": "Interval scheduling and greedy feasibility checks are frequent coding interview questions.",
+          "completionCriteria": "Can distinguish greedy-solvable problems from DP problems and solve interval scheduling problems."
+        },
+        {
+          "id": "p2-backtracking-dp",
+          "phaseId": "phase-2",
+          "title": "Backtracking & Dynamic Programming (DP)",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Advanced",
+          "estimatedHours": 22,
+          "originalSection": "2. Algorithms / 9. Problem-solving and Coding",
+          "summary": "Progresses naturally from exhaustive recursive search (Backtracking with pruning) to overlapping subproblems (Top-Down Memoization and Bottom-Up Tabulation).",
+          "whyImportant": "Backtracking and DP represent the capstone of algorithmic problem solving in coding interviews.",
+          "prerequisites": [
+            "p1-functions-recursion",
+            "p2-trees-bst",
+            "p2-graphs",
+            "p2-greedy"
+          ],
+          "unlocks": [
+            "p2-advanced-dsa",
+            "p8-dsa-patterns"
+          ],
+          "subtopics": [
+            {
+              "name": "Backtracking: state-space tree pruning, Subsets, Permutations, Combination Sum, N-Queens",
+              "priority": "P0"
+            },
+            {
+              "name": "DP Foundations: Overlapping subproblems, optimal substructure, Memoization (top-down) vs. Tabulation (bottom-up)",
+              "priority": "P0"
+            },
+            {
+              "name": "1D & Knapsack DP: Fibonacci, Climbing Stairs, Coin Change, 0/1 Knapsack, Subset Sum, Rod Cutting",
+              "priority": "P0"
+            },
+            {
+              "name": "String & Sequence DP: Longest Common Subsequence (LCS), Longest Increasing Subsequence (LIS), Edit Distance",
+              "priority": "P1"
+            },
+            {
+              "name": "Interval & Matrix DP: Matrix Chain Multiplication, Grid Unique Paths",
+              "priority": "P1"
+            }
+          ],
+          "resources": [
+            {
+              "title": "NeetCode Roadmap — Backtracking, 1-D DP & 2-D DP",
+              "url": "https://neetcode.io/roadmap",
+              "type": "Interactive"
+            },
+            {
+              "title": "Tech Interview Handbook — Dynamic Programming",
+              "url": "https://www.techinterviewhandbook.org/",
+              "type": "Guide"
+            }
+          ],
+          "exercises": [
+            "Solve Subsets, Permutations, Combination Sum, and Word Search using Backtracking.",
+            "Solve House Robber, Coin Change, Partition Equal Subset Sum, Longest Common Subsequence, Edit Distance, and Longest Increasing Subsequence."
+          ],
+          "interviewQuestions": [
+            "Walk through how to transition a brute-force recursive solution to top-down memoization, bottom-up tabulation, and space-optimized DP.",
+            "What is the difference between 0/1 Knapsack and Unbounded Knapsack in the inner loop iteration order of 1D DP?"
+          ],
+          "interviewRelevance": "Medium-to-hard DP and Backtracking questions frequently serve as the differentiator in final coding loops.",
+          "completionCriteria": "Can define state, transition equation, and base cases for 1D/2D DP and prune backtracking trees cleanly."
+        },
+        {
+          "id": "p2-advanced-dsa",
+          "phaseId": "phase-2",
+          "title": "Tries, String Matching & Bit Manipulation",
+          "priority": "Should Learn",
+          "priorityCode": "P1",
+          "difficulty": "Advanced",
+          "estimatedHours": 12,
+          "originalSection": "2. Algorithms / 4. Data Structures / 9. Problem-solving and Coding",
+          "summary": "Covers Prefix Trees (Tries), rolling string hashes, pattern matching (KMP, Rabin-Karp), bit manipulation tricks, and advanced suffix structures.",
+          "whyImportant": "Tries power autocomplete and IP routing; bit manipulation enables compact state representation and O(1) parity checks.",
+          "prerequisites": [
+            "p2-arrays-strings",
+            "p2-trees-bst",
+            "p2-backtracking-dp"
+          ],
+          "unlocks": [
+            "p8-dsa-patterns"
+          ],
+          "subtopics": [
+            {
+              "name": "Trie (Prefix Tree): insertion, prefix search, DFS/BFS in a Trie, autocomplete",
+              "priority": "P0"
+            },
+            {
+              "name": "Bit Manipulation: XOR properties, bitmasks, power-of-two checks, counting set bits",
+              "priority": "P1"
+            },
+            {
+              "name": "String Hashing, Rolling Hash (Rabin-Karp), Longest Common Prefix (LCP), Longest Palindromic Substring",
+              "priority": "P1"
+            },
+            {
+              "name": "Pattern Matching: Knuth-Morris-Pratt (KMP), Z-Algorithm, Boyer-Moore, Aho-Corasick",
+              "priority": "P1"
+            },
+            {
+              "name": "Competitive String Structures: Manacher's, Suffix Array/Tree/Automaton, Burrows-Wheeler, Baker-Bird",
+              "priority": "P2"
+            }
+          ],
+          "resources": [
+            {
+              "title": "NeetCode Roadmap — Tries & Bit Manipulation",
+              "url": "https://neetcode.io/roadmap",
+              "type": "Interactive"
+            }
+          ],
+          "exercises": [
+            "Implement a Trie (Prefix Tree) and solve Design Add and Search Words Data Structure and Word Search II.",
+            "Solve Single Number, Counting Bits, Reverse Bits, and Longest Palindromic Substring."
+          ],
+          "interviewQuestions": [
+            "Compare a Trie with a Hash Set for storing 1 million dictionary words and supporting prefix autocomplete.",
+            "How does rolling hash in Rabin-Karp achieve O(N + M) expected string matching time?"
+          ],
+          "interviewRelevance": "Tries are very common in both coding and LLD/HLD autocomplete questions; KMP/Rabin-Karp are useful for senior rounds.",
+          "completionCriteria": "Can implement a Trie from scratch and apply XOR/bitmask operations without lookup."
+        }
+      ]
+    },
+    {
+      "id": "phase-3",
+      "number": 3,
+      "title": "Phase 3: Computer Science Fundamentals",
+      "shortTitle": "CS Fundamentals",
+      "subtitle": "Operating systems, concurrency, virtual memory, computer networks, SQL, and NoSQL databases",
+      "difficulty": "Intermediate",
+      "estimatedWeeks": "4–5 Weeks",
+      "summary": "Unifies Operating Systems (Section 8), Concurrency & Memory (duplicated in Section 10), Networking (Sections 7 & 10), and Databases (Section 5) into the foundational systems layer required before building backend applications or distributed architectures.",
+      "whyThisOrder": "You cannot reason about database connection pools, thread-safe services, or distributed system bottlenecks (Phase 6) without first understanding OS processes/threads, virtual memory, TCP/HTTP networking, and relational/NoSQL storage.",
+      "file": "roadmap/phase-3-computer-science-fundamentals.md",
+      "topics": [
+        {
+          "id": "p3-os-processes",
+          "phaseId": "phase-3",
+          "title": "Operating Systems: Processes, Threads & Concurrency",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Intermediate",
+          "estimatedHours": 14,
+          "originalSection": "8. Operating Systems / 10. Programming Languages and Concepts",
+          "summary": "Deduplicates and unifies OS processes vs. threads, CPU scheduling, synchronization primitives (mutexes, semaphores, monitors), deadlocks, and async concurrency.",
+          "whyImportant": "Backend engineers write multi-threaded and asynchronous services daily; concurrency bugs (race conditions, deadlocks) are prime interview topics.",
+          "prerequisites": [
+            "p1-memory-model",
+            "p2-stacks-queues",
+            "p2-heaps-pq"
+          ],
+          "unlocks": [
+            "p3-os-memory",
+            "p5-lld-api-concurrency",
+            "p6-scalability-lb"
+          ],
+          "subtopics": [
+            {
+              "name": "Processes vs. Threads, context switching, and Parallelism vs. Concurrency",
+              "priority": "P0"
+            },
+            {
+              "name": "Thread safety, Race conditions, Critical sections, and Synchronization primitives (Mutexes, Semaphores, Monitors)",
+              "priority": "P0"
+            },
+            {
+              "name": "Deadlock conditions (Coffman conditions) and Deadlock detection, prevention, and avoidance",
+              "priority": "P0"
+            },
+            {
+              "name": "Asynchronous programming: Event loops, Callbacks, Promises, Futures, and Coroutines",
+              "priority": "P0"
+            },
+            {
+              "name": "CPU Scheduling algorithms: FIFO, Round Robin, Shortest Job First, Earliest Deadline First (EDF), Fair Share, WFQ",
+              "priority": "P1"
+            }
+          ],
+          "resources": [
+            {
+              "title": "Operating Systems: Three Easy Pieces (OSTEP) — Virtualization & Concurrency",
+              "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+              "type": "Book"
+            }
+          ],
+          "exercises": [
+            "Implement a thread-safe Bounded Blocking Queue using a mutex and condition variables (monitors).",
+            "Write a small program that intentionally triggers a deadlock between two locks, then fix it via lock ordering."
+          ],
+          "interviewQuestions": [
+            "What are the 4 necessary conditions for a deadlock, and what is the most practical way to prevent deadlocks in production code?",
+            "Explain the difference between a Mutex and a Semaphore, and between multi-threading and a single-threaded async event loop."
+          ],
+          "interviewRelevance": "Heavily tested in CS fundamentals rounds, concurrency coding problems, and LLD.",
+          "completionCriteria": "Can explain processes vs. threads, prevent race conditions and deadlocks, and implement producer-consumer synchronization."
+        },
+        {
+          "id": "p3-os-memory",
+          "phaseId": "phase-3",
+          "title": "Virtual Memory, Paging & File Systems",
+          "priority": "Should Learn",
+          "priorityCode": "P1",
+          "difficulty": "Intermediate",
+          "estimatedHours": 10,
+          "originalSection": "8. Operating Systems / 10. Programming Languages and Concepts",
+          "summary": "Covers virtual address spaces, demand paging, page tables, TLB, page replacement policies (LRU, FIFO, Clock), memory-mapped files, and local/network file systems.",
+          "whyImportant": "Explains how databases use `mmap` and buffer pools, why page faults hurt p99 latency, and how OS caching works.",
+          "prerequisites": [
+            "p1-memory-model",
+            "p3-os-processes"
+          ],
+          "unlocks": [
+            "p3-dbms-sql",
+            "p4-linux-cli"
+          ],
+          "subtopics": [
+            {
+              "name": "Virtual Memory, Demand Paging, Page Tables, TLB, and Page Faults",
+              "priority": "P0"
+            },
+            {
+              "name": "Page Replacement Algorithms: LRU, FIFO, Optimal, and Clock algorithm",
+              "priority": "P1"
+            },
+            {
+              "name": "Buddy memory allocation and Memory-mapped files (mmap)",
+              "priority": "P1"
+            },
+            {
+              "name": "File Systems: Inodes, Journaling file systems (ext3, ext4), File system encryption, and Network file systems (NFS, SMB)",
+              "priority": "P1"
+            }
+          ],
+          "resources": [
+            {
+              "title": "Operating Systems: Three Easy Pieces (OSTEP) — Persistence & File Systems",
+              "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+              "type": "Book"
+            }
+          ],
+          "exercises": [
+            "Simulate FIFO, Optimal, and LRU page replacement algorithms on a page reference string and compare page-fault counts."
+          ],
+          "interviewQuestions": [
+            "What happens step-by-step in hardware and the OS kernel when a program accesses a virtual memory address?",
+            "How does a journaling file system like ext4 recover quickly after an unexpected power loss?"
+          ],
+          "interviewRelevance": "Core CS fundamentals question; directly connects to LRU cache design and database storage engines.",
+          "completionCriteria": "Can trace a virtual address lookup (TLB -> Page Table -> Disk Page Fault) and explain journaling file systems."
+        },
+        {
+          "id": "p3-networking",
+          "phaseId": "phase-3",
+          "title": "Computer Networks, TCP/IP, DNS & HTTP",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Intermediate",
+          "estimatedHours": 12,
+          "originalSection": "7. Networking / 10. Programming Languages and Concepts",
+          "summary": "Covers the OSI & TCP/IP models, TCP vs. UDP (3-way handshake, flow/congestion control), DNS resolution, sockets, RPC, and HTTP/1.1, HTTP/2, HTTP/3, and TLS.",
+          "whyImportant": "Every web request, API call, and microservice interaction traverses DNS, TCP/UDP, TLS, and HTTP.",
+          "prerequisites": [
+            "p2-graphs"
+          ],
+          "unlocks": [
+            "p4-api-architecture",
+            "p6-scalability-lb",
+            "p7-security"
+          ],
+          "subtopics": [
+            {
+              "name": "TCP/IP stack & OSI model layers",
+              "priority": "P0"
+            },
+            {
+              "name": "TCP vs. UDP: 3-way handshake, reliability, flow control, congestion control, and QUIC/UDP use cases",
+              "priority": "P0"
+            },
+            {
+              "name": "DNS (Domain Name System): hierarchical resolution process, record types (A, AAAA, CNAME, NS), and TTL caching",
+              "priority": "P0"
+            },
+            {
+              "name": "HTTP protocol: Request methods (GET, POST, PUT, PATCH, DELETE), Status codes (2xx–5xx), headers, HTTP/1.1 vs. HTTP/2 vs. HTTP/3",
+              "priority": "P0"
+            },
+            {
+              "name": "Client-server architecture, OS Sockets, WebSockets, and Remote Procedure Call (RPC / gRPC)",
+              "priority": "P1"
+            }
+          ],
+          "resources": [
+            {
+              "title": "MDN Web Docs — HTTP Reference & Status Codes",
+              "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status",
+              "type": "Official Docs"
+            },
+            {
+              "title": "ByteByteGo System Design 101 — Network Protocols",
+              "url": "https://github.com/ByteByteGoHq/system-design-101",
+              "type": "Repo"
+            }
+          ],
+          "exercises": [
+            "Inspect a live HTTPS request using `curl -v` or browser DevTools to trace DNS lookup, TCP handshake, TLS negotiation, and HTTP headers.",
+            "Build a minimal multi-client TCP echo or chat server using sockets."
+          ],
+          "interviewQuestions": [
+            "What happens step-by-step when you type `https://example.com` into a browser and press Enter?",
+            "Compare TCP and UDP: why do video streaming, gaming, and HTTP/3 (QUIC) use UDP?"
+          ],
+          "interviewRelevance": "The 'What happens when you type a URL' question and TCP vs. UDP / REST vs. gRPC are universal interview classics.",
+          "completionCriteria": "Can trace the end-to-end lifecycle of an HTTPS request from DNS resolution to socket teardown."
+        },
+        {
+          "id": "p3-dbms-sql",
+          "phaseId": "phase-3",
+          "title": "Relational Databases (SQL), Normalization & Transactions",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Intermediate",
+          "estimatedHours": 16,
+          "originalSection": "5. Databases / 13. System Design",
+          "summary": "Covers relational schema design, constraints, normal forms (1NF–BCNF), SQL DDL/DML/DQL/DCL, Joins, Window Functions, ACID properties, and Transaction Isolation Levels.",
+          "whyImportant": "Relational databases remain the default transactional store for business-critical software; SQL and ACID isolation are tested in both coding and system design rounds.",
+          "prerequisites": [
+            "p2-hash-tables",
+            "p2-trees-bst"
+          ],
+          "unlocks": [
+            "p3-db-indexing",
+            "p3-nosql",
+            "p4-api-architecture",
+            "p6-db-scaling"
+          ],
+          "subtopics": [
+            {
+              "name": "Relational schema constraints (Primary Key, Foreign Key, Unique, Check, Default) & Normalization (1NF, 2NF, 3NF, BCNF)",
+              "priority": "P0"
+            },
+            {
+              "name": "SQL Queries (DQL): Joins (Inner, Left/Right/Full Outer, Cross), GROUP BY/HAVING, Subqueries, and Window Functions",
+              "priority": "P0"
+            },
+            {
+              "name": "SQL DDL (CREATE, ALTER, DROP), DML (INSERT, UPDATE, DELETE, MERGE/UPSERT, TRUNCATE), and DCL (GRANT, REVOKE)",
+              "priority": "P0"
+            },
+            {
+              "name": "Transactions & ACID Properties (Atomicity, Consistency, Isolation, Durability) with COMMIT/ROLLBACK",
+              "priority": "P0"
+            },
+            {
+              "name": "Transaction Isolation Levels: Read Uncommitted, Read Committed, Repeatable Read, Serializable (dirty/non-repeatable/phantom reads)",
+              "priority": "P0"
+            },
+            {
+              "name": "Views, Materialized Views, Stored Procedures, Functions, and Triggers (BEFORE/AFTER)",
+              "priority": "P1"
+            }
+          ],
+          "resources": [
+            {
+              "title": "PostgreSQL Current Documentation & SQL Tutorial",
+              "url": "https://www.postgresql.org/docs/current/tutorial.html",
+              "type": "Official Docs"
+            }
+          ],
+          "exercises": [
+            "Design a normalized 3NF e-commerce schema (users, products, orders, order_items, payments) and write analytical queries using Joins and `ROW_NUMBER() / RANK()` window functions.",
+            "Open two concurrent psql/MySQL sessions to reproduce a dirty read, lost update, or phantom read under different isolation levels."
+          ],
+          "interviewQuestions": [
+            "Explain the 4 ACID properties and how write-ahead logging (WAL) and MVCC implement them.",
+            "What concurrency anomalies (dirty read, non-repeatable read, phantom read, write skew) occur at each SQL isolation level?"
+          ],
+          "interviewRelevance": "SQL query writing, schema normalization, and transaction isolation levels are staple backend interview topics.",
+          "completionCriteria": "Can write complex Joins/Window functions, normalize schemas to 3NF/BCNF, and explain SQL isolation levels."
+        },
+        {
+          "id": "p3-db-indexing",
+          "phaseId": "phase-3",
+          "title": "Database Indexing & Query Optimization",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Intermediate",
+          "estimatedHours": 10,
+          "originalSection": "5. Databases / Issue #19 Composite Indexing",
+          "summary": "Covers B-Tree and B+ Tree indexes, clustered vs. non-clustered indexes, composite indexes (leftmost prefix rule), bitmap indexes, covering indexes, and `EXPLAIN ANALYZE` query plans.",
+          "whyImportant": "Bad indexing is the #1 cause of database bottlenecks in production systems; interviewers regularly ask how to optimize slow queries.",
+          "prerequisites": [
+            "p2-trees-bst",
+            "p3-dbms-sql"
+          ],
+          "unlocks": [
+            "p3-nosql",
+            "p6-db-scaling"
+          ],
+          "subtopics": [
+            {
+              "name": "B-Tree vs. B+ Tree storage internals and Clustered vs. Secondary indexes",
+              "priority": "P0"
+            },
+            {
+              "name": "Composite Indexes, column ordering (leftmost prefix rule), and Covering Indexes",
+              "priority": "P0",
+              "added": true
+            },
+            {
+              "name": "Bitmap Indexing, Hash Indexing, and Full-Text / Inverted Indexes",
+              "priority": "P1"
+            },
+            {
+              "name": "Query execution plans (`EXPLAIN ANALYZE`), index selectivity, and write-amplification trade-offs",
+              "priority": "P0"
+            }
+          ],
+          "resources": [
+            {
+              "title": "Use The Index, Luke! — SQL Indexing & Tuning Guide",
+              "url": "https://github.com/passionatefool/USE-THE-INDEX-LUKE",
+              "type": "Guide"
+            },
+            {
+              "title": "PostgreSQL Documentation — Indexes",
+              "url": "https://www.postgresql.org/docs/current/index.html",
+              "type": "Official Docs"
+            }
+          ],
+          "exercises": [
+            "Seed a table with 1,000,000 rows, run `EXPLAIN ANALYZE` on a multi-column filter+sort query before and after adding a composite index."
+          ],
+          "interviewQuestions": [
+            "If you create a composite index on `(user_id, created_at)`, which queries can use it and why does a query filtering only on `created_at` miss the index?",
+            "Why does adding too many indexes slow down `INSERT`, `UPDATE`, and `DELETE` operations?"
+          ],
+          "interviewRelevance": "Directly tested in backend engineering and system design interviews.",
+          "completionCriteria": "Can design composite indexes for query access patterns and read `EXPLAIN` plans to eliminate sequential scans."
+        },
+        {
+          "id": "p3-nosql",
+          "phaseId": "phase-3",
+          "title": "NoSQL Databases (Key-Value, Document, Column-Family, Graph)",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Intermediate",
+          "estimatedHours": 10,
+          "originalSection": "5. Databases / 13. System Design",
+          "summary": "Covers the 4 NoSQL categories—Key-Value (Redis/DynamoDB), Document (MongoDB), Wide-Column (Cassandra), and Graph (Neo4j)—plus LSM-Trees vs. B-Trees and SQL vs. NoSQL selection criteria.",
+          "whyImportant": "System design interviews require choosing the right storage engine (SQL, Document, Key-Value, Columnar, or Graph) for each workload's read/write/consistency profile.",
+          "prerequisites": [
+            "p2-hash-tables",
+            "p3-dbms-sql",
+            "p3-db-indexing"
+          ],
+          "unlocks": [
+            "p6-caching-queues",
+            "p6-db-scaling"
+          ],
+          "subtopics": [
+            {
+              "name": "Key-Value stores (Redis, DynamoDB): in-memory caching, partition keys, TTLs",
+              "priority": "P0"
+            },
+            {
+              "name": "Document databases (MongoDB): schema flexibility, embedding vs. referencing, indexing",
+              "priority": "P1"
+            },
+            {
+              "name": "Column-family stores (Cassandra, Bigtable): LSM-Trees, SSTables, high write throughput, time-series",
+              "priority": "P1"
+            },
+            {
+              "name": "Graph databases (Neo4j): traversal-heavy social/recommendation relationships",
+              "priority": "P1"
+            },
+            {
+              "name": "SQL vs. NoSQL decision framework and ACID vs. BASE trade-offs",
+              "priority": "P0"
+            }
+          ],
+          "resources": [
+            {
+              "title": "System Design Primer — SQL vs. NoSQL",
+              "url": "https://github.com/donnemartin/system-design-primer",
+              "type": "Repo"
+            }
+          ],
+          "exercises": [
+            "Compare schema and query patterns for a chat message history store in PostgreSQL vs. Cassandra/DynamoDB vs. MongoDB."
+          ],
+          "interviewQuestions": [
+            "When would you choose a wide-column store (Cassandra) or DynamoDB over PostgreSQL?",
+            "Compare B+ Trees (read-optimized) with LSM-Trees + SSTables (write-optimized) used in NoSQL engines."
+          ],
+          "interviewRelevance": "Required in every System Design interview when justifying storage layer choices.",
+          "completionCriteria": "Can justify when to use Relational, Key-Value, Document, Wide-Column, or Graph databases based on access patterns."
+        }
+      ]
+    },
+    {
+      "id": "phase-4",
+      "number": 4,
+      "title": "Phase 4: Software Development and Engineering",
+      "shortTitle": "Software Engineering",
+      "subtitle": "Git, Linux CLI, SDLC, Clean Code, SOLID principles, Testing, APIs, and Application Architecture",
+      "difficulty": "Intermediate",
+      "estimatedWeeks": "3–4 Weeks",
+      "summary": "Brings together Version Control (Section 15), Software Development Methodologies, Coding Best Practices (Section 9), Software Testing Foundations (Section 14), and Application Architecture (Section 12) so learners can build, test, and structure real-world services.",
+      "whyThisOrder": "Before designing complex object models (Phase 5) or distributed architectures (Phase 6), an engineer needs mastery of Git, CLI workflows, clean code/SOLID, automated testing, and REST/RPC API design.",
+      "file": "roadmap/phase-4-software-development-and-engineering.md",
+      "topics": [
+        {
+          "id": "p4-git-vcs",
+          "phaseId": "phase-4",
+          "title": "Git & Version Control Workflows",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Beginner",
+          "estimatedHours": 6,
+          "originalSection": "15. Version control System / 9. Problem-solving and Coding",
+          "summary": "Covers Git internals (commits, trees, blobs, refs), branching strategies, merge vs. rebase, conflict resolution, `git bisect`, and pull request code review workflows.",
+          "whyImportant": "Version control and collaborative code review are daily engineering essentials.",
+          "prerequisites": [
+            "p1-prog-fundamentals"
+          ],
+          "unlocks": [
+            "p4-clean-code-solid",
+            "p7-cicd-iac"
+          ],
+          "subtopics": [
+            {
+              "name": "Git fundamentals: staging, commits, branches, HEAD, and remote tracking (GitHub, GitLab, Bitbucket)",
+              "priority": "P0"
+            },
+            {
+              "name": "Git Merge vs. Git Rebase, squash commits, cherry-pick, reflog, and resolving merge conflicts",
+              "priority": "P0"
+            },
+            {
+              "name": "Collaborative workflows: trunk-based development, feature branches, and code reviews",
+              "priority": "P1"
+            }
+          ],
+          "resources": [
+            {
+              "title": "Pro Git Book (Official Free Book)",
+              "url": "https://git-scm.com/book/en/v2",
+              "type": "Book"
+            }
+          ],
+          "exercises": [
+            "Practice interactive rebase (`git rebase -i`), resolve a simulated merge conflict, and recover a dropped commit using `git reflog`."
+          ],
+          "interviewQuestions": [
+            "What is the difference between `git merge` and `git rebase`, and why should you never rebase a shared public branch?",
+            "How does `git bisect` help locate a regression commit in O(log N) steps?"
+          ],
+          "interviewRelevance": "Tested in practical engineering discussions and take-home/pair-programming rounds.",
+          "completionCriteria": "Can branch, rebase interactively, resolve conflicts, and use `reflog`/`bisect` confidently."
+        },
+        {
+          "id": "p4-linux-cli",
+          "phaseId": "phase-4",
+          "title": "Linux, Shell & Command-Line Fundamentals",
+          "priority": "Should Learn",
+          "priorityCode": "P1",
+          "difficulty": "Beginner",
+          "estimatedHours": 8,
+          "originalSection": "8. Operating Systems (Expanded for Practical Engineering)",
+          "summary": "Covers POSIX file permissions, standard streams (stdin/stdout/stderr), pipes, process management (`ps`, `top`, `kill`), network diagnostics (`curl`, `netstat`/`ss`, `dig`), and text processing.",
+          "whyImportant": "Backend servers, containers, and CI runners run on Linux; CLI fluency is crucial for debugging production systems.",
+          "prerequisites": [
+            "p3-os-processes",
+            "p3-os-memory"
+          ],
+          "unlocks": [
+            "p7-containers-k8s",
+            "p7-cicd-iac"
+          ],
+          "subtopics": [
+            {
+              "name": "File navigation, permissions (`chmod`, `chown`), symlinks, and standard streams/pipes (`|`, `>`, `2>&1`)",
+              "priority": "P0",
+              "added": true
+            },
+            {
+              "name": "Text & log inspection (`grep`, `awk`, `sed`, `jq`, `tail -f`, `less`)",
+              "priority": "P1",
+              "added": true
+            },
+            {
+              "name": "Process, memory, disk, and network diagnostics (`ps`, `top`, `lsof`, `df`, `du`, `curl`, `ss`)",
+              "priority": "P1",
+              "added": true
+            }
+          ],
+          "resources": [
+            {
+              "title": "Operating Systems: Three Easy Pieces (OSTEP)",
+              "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+              "type": "Book"
+            }
+          ],
+          "exercises": [
+            "Write a shell pipeline that parses an NGINX access log to find the top 10 IP addresses causing HTTP 500 errors."
+          ],
+          "interviewQuestions": [
+            "How would you diagnose a Linux server that is running out of disk space even though `du` shows low file usage (hint: deleted open file descriptors via `lsof`)?",
+            "How do you find which process is listening on port 8080 and terminate it gracefully?"
+          ],
+          "interviewRelevance": "Frequently asked in backend, DevOps/SRE, and production debugging interviews.",
+          "completionCriteria": "Can inspect logs, diagnose CPU/memory/port issues, and chain shell commands comfortably."
+        },
+        {
+          "id": "p4-clean-code-solid",
+          "phaseId": "phase-4",
+          "title": "SDLC, Clean Code & SOLID Principles",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Intermediate",
+          "estimatedHours": 10,
+          "originalSection": "6. Low-Level Design / 9. Problem-solving and Coding / 13. System Design",
+          "summary": "Consolidates duplicated coverage of Clean Code, DRY, KISS, YAGNI, Law of Demeter, Cohesion/Coupling, and the 5 SOLID principles from Sections 6, 9, and 13.",
+          "whyImportant": "Interviewers grade coding and LLD rounds heavily on modularity, naming, separation of concerns, and adherence to SOLID principles.",
+          "prerequisites": [
+            "p1-oop-basics",
+            "p4-git-vcs"
+          ],
+          "unlocks": [
+            "p4-testing-debugging",
+            "p5-ood-modeling",
+            "p5-design-patterns"
+          ],
+          "subtopics": [
+            {
+              "name": "Code readability, naming conventions, modularity, high cohesion, and loose coupling",
+              "priority": "P0"
+            },
+            {
+              "name": "DRY (Don't Repeat Yourself), KISS (Keep It Simple), YAGNI, and Law of Demeter",
+              "priority": "P0"
+            },
+            {
+              "name": "Single Responsibility Principle (SRP) & Open/Closed Principle (OCP)",
+              "priority": "P0"
+            },
+            {
+              "name": "Liskov Substitution Principle (LSP) & Interface Segregation Principle (ISP)",
+              "priority": "P0"
+            },
+            {
+              "name": "Dependency Inversion Principle (DIP), Dependency Injection, and Inversion of Control",
+              "priority": "P0"
+            },
+            {
+              "name": "Software Development Lifecycle (SDLC): Agile, iterative delivery, and code review culture",
+              "priority": "P1"
+            }
+          ],
+          "resources": [
+            {
+              "title": "Refactoring.Guru — SOLID & Design Principles",
+              "url": "https://refactoring.guru/design-patterns",
+              "type": "Guide"
+            }
+          ],
+          "exercises": [
+            "Refactor a 200-line 'God class' order processor that violates SRP, OCP, and DIP into clean, testable services."
+          ],
+          "interviewQuestions": [
+            "Give a concrete code example of a Liskov Substitution Principle (LSP) violation (such as Square inheriting from Rectangle) and how to fix it.",
+            "How does Dependency Inversion (DIP) make unit testing with mocks possible?"
+          ],
+          "interviewRelevance": "Directly evaluated in every Low-Level Design and machine-coding interview.",
+          "completionCriteria": "Can spot SOLID violations in existing code and refactor toward clean interfaces and dependency injection."
+        },
+        {
+          "id": "p4-testing-debugging",
+          "phaseId": "phase-4",
+          "title": "Software Testing Foundations & Quality Engineering",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Intermediate",
+          "estimatedHours": 10,
+          "originalSection": "14. Testing, Reliability & Observability / 9. Problem-solving and Coding",
+          "summary": "Covers the testing pyramid (unit, integration, E2E), test doubles (mocks, stubs, fakes, spies), contract testing, database integration testing, and property-based testing.",
+          "whyImportant": "Writing testable code and verifying edge cases separates senior engineering candidates from pure competitive programmers.",
+          "prerequisites": [
+            "p1-exception-handling",
+            "p4-clean-code-solid"
+          ],
+          "unlocks": [
+            "p5-lld-api-concurrency",
+            "p7-cicd-iac",
+            "p7-observability-sre"
+          ],
+          "subtopics": [
+            {
+              "name": "Unit, integration, end-to-end (E2E), and acceptance tests; Testing Pyramid vs. Testing Trophy",
+              "priority": "P0"
+            },
+            {
+              "name": "Test doubles: Mocks, stubs, fakes, spies, and deterministic fixtures",
+              "priority": "P0"
+            },
+            {
+              "name": "Test coverage metrics and their limitations; boundary-value analysis",
+              "priority": "P0"
+            },
+            {
+              "name": "API contract tests (consumer-driven contracts), database migration tests, and Testcontainers",
+              "priority": "P1"
+            },
+            {
+              "name": "Concurrency tests, fault injection, idempotency tests, and property-based/fuzz testing",
+              "priority": "P1"
+            }
+          ],
+          "resources": [
+            {
+              "title": "Tech Interview Handbook — Software Engineering Best Practices",
+              "url": "https://www.techinterviewhandbook.org/",
+              "type": "Guide"
+            }
+          ],
+          "exercises": [
+            "Write unit tests with mocked external dependencies and an integration test suite for a REST service."
+          ],
+          "interviewQuestions": [
+            "What is the difference between a Mock, a Stub, and a Fake, and when can over-mocking make tests brittle?",
+            "Why can 95% line coverage still miss critical production bugs?"
+          ],
+          "interviewRelevance": "Tested in machine coding, LLD, and backend engineering interviews.",
+          "completionCriteria": "Can design unit and integration tests using mocks/fakes and test boundary/failure cases systematically."
+        },
+        {
+          "id": "p4-api-architecture",
+          "phaseId": "phase-4",
+          "title": "API Development & Application Architecture",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Intermediate",
+          "estimatedHours": 12,
+          "originalSection": "12. System Architecture / 6. Low-Level Design",
+          "summary": "Covers RESTful API design, idempotency, pagination, versioning, gRPC/GraphQL comparison, Layered Architecture (Presentation, Business Logic, Data Access), and monolith vs. SOA.",
+          "whyImportant": "Clean API design and layered service architecture bridge single-process code and multi-service High-Level Design.",
+          "prerequisites": [
+            "p3-networking",
+            "p3-dbms-sql",
+            "p4-clean-code-solid"
+          ],
+          "unlocks": [
+            "p5-lld-api-concurrency",
+            "p6-scalability-lb",
+            "p6-microservices-dist"
+          ],
+          "subtopics": [
+            {
+              "name": "RESTful API design: resource naming, HTTP verbs, status codes, pagination (cursor vs. offset), filtering",
+              "priority": "P0"
+            },
+            {
+              "name": "API Versioning (URI, header, query), Idempotency keys, and safe retries",
+              "priority": "P0"
+            },
+            {
+              "name": "REST vs. gRPC (Protocol Buffers, HTTP/2 streaming) vs. GraphQL trade-offs",
+              "priority": "P0"
+            },
+            {
+              "name": "Layered Architecture: Presentation, Business Logic, Data Access (Repository), and Cross-cutting concerns",
+              "priority": "P1"
+            },
+            {
+              "name": "Monolithic Architecture vs. Service-Oriented Architecture (SOA) & 12-Factor App principles",
+              "priority": "P1"
+            }
+          ],
+          "resources": [
+            {
+              "title": "System Design Primer — API & Application Architecture",
+              "url": "https://github.com/donnemartin/system-design-primer",
+              "type": "Repo"
+            },
+            {
+              "title": "ByteByteGo System Design 101 — REST vs. gRPC vs. GraphQL",
+              "url": "https://github.com/ByteByteGoHq/system-design-101",
+              "type": "Repo"
+            }
+          ],
+          "exercises": [
+            "Design and build a layered REST API (Controller -> Service -> Repository) with cursor-based pagination, input validation, and idempotency keys."
+          ],
+          "interviewQuestions": [
+            "Why is cursor-based pagination preferred over `OFFSET / LIMIT` pagination on large tables?",
+            "How do you make a `POST /payments` API endpoint idempotent so network retries never double-charge a user?"
+          ],
+          "interviewRelevance": "API contract design and idempotency are asked in virtually every HLD and backend interview.",
+          "completionCriteria": "Can design REST/gRPC API contracts with pagination, versioning, and idempotency guarantees."
+        }
+      ]
+    },
+    {
+      "id": "phase-5",
+      "number": 5,
+      "title": "Phase 5: Low-Level Design (LLD)",
+      "shortTitle": "Low-Level Design (LLD)",
+      "subtitle": "Object-oriented domain modeling, UML diagrams, GoF design patterns, and classic LLD interview problems",
+      "difficulty": "Intermediate",
+      "estimatedWeeks": "3–4 Weeks",
+      "summary": "Unifies all Low-Level Design content from Section 6 and removes the duplicate Design Patterns lists previously scattered in Sections 10 and 13.",
+      "whyThisOrder": "LLD applies OOP (Phase 1), data structures (Phase 2), concurrency (Phase 3), and SOLID principles (Phase 4) to design extensible, thread-safe software components before scaling to multi-machine HLD (Phase 6).",
+      "file": "roadmap/phase-5-low-level-design.md",
+      "topics": [
+        {
+          "id": "p5-ood-modeling",
+          "phaseId": "phase-5",
+          "title": "Requirements Clarification, Domain Modeling & UML",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Intermediate",
+          "estimatedHours": 8,
+          "originalSection": "6. Low-Level Design & Object-Oriented Design",
+          "summary": "Covers translating ambiguous requirements into entities, value objects, aggregates, invariants, and communicating designs with UML Class, Sequence, and State Machine diagrams.",
+          "whyImportant": "LLD interviews test how systematically you clarify scope, identify core entities, and communicate relationships before writing code.",
+          "prerequisites": [
+            "p1-oop-basics",
+            "p4-clean-code-solid"
+          ],
+          "unlocks": [
+            "p5-design-patterns",
+            "p5-lld-api-concurrency",
+            "p5-lld-problems"
+          ],
+          "subtopics": [
+            {
+              "name": "Clarify functional/non-functional requirements and define extension points without overengineering",
+              "priority": "P0"
+            },
+            {
+              "name": "Identify entities, value objects, aggregates, invariants, and object lifecycles",
+              "priority": "P0"
+            },
+            {
+              "name": "UML Class Diagrams: association, aggregation, composition, inheritance, realization",
+              "priority": "P0"
+            },
+            {
+              "name": "UML Sequence Diagrams (method calls, async boundaries) & State Machine Diagrams (transitions, guards)",
+              "priority": "P1"
+            }
+          ],
+          "resources": [
+            {
+              "title": "Refactoring.Guru — Design Patterns & UML Diagrams",
+              "url": "https://refactoring.guru/design-patterns/catalog",
+              "type": "Guide"
+            }
+          ],
+          "exercises": [
+            "Draw a UML Class Diagram and State Machine Diagram for a Vending Machine and an Order Fulfillment workflow."
+          ],
+          "interviewQuestions": [
+            "What is the difference between Aggregation and Composition in a UML Class Diagram?",
+            "How do you decide which requirements to model as interfaces vs. concrete classes in a 45-minute LLD interview?"
+          ],
+          "interviewRelevance": "First 10–15 minutes of every LLD/OOD interview.",
+          "completionCriteria": "Can turn a problem prompt into a clean entity model and UML class/state diagram within 10 minutes."
+        },
+        {
+          "id": "p5-design-patterns",
+          "phaseId": "phase-5",
+          "title": "Design Patterns in Practice (Creational, Structural, Behavioral)",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Intermediate",
+          "estimatedHours": 14,
+          "originalSection": "6. Low-Level Design / 10. Programming Languages / 13. System Design (Deduplicated)",
+          "summary": "Consolidates all Creational, Structural, and Behavioral design patterns into one authoritative module focused on practical applicability and knowing when NOT to force a pattern.",
+          "whyImportant": "Patterns like Strategy, Factory, Observer, Builder, State, and Decorator solve recurring extensibility problems in LLD interviews and production codebases.",
+          "prerequisites": [
+            "p4-clean-code-solid",
+            "p5-ood-modeling"
+          ],
+          "unlocks": [
+            "p5-lld-api-concurrency",
+            "p5-lld-problems"
+          ],
+          "subtopics": [
+            {
+              "name": "Creational Patterns: Factory / Abstract Factory (P0), Builder (P1), Singleton & thread-safety pitfalls (P1), Prototype (P2)",
+              "priority": "P0"
+            },
+            {
+              "name": "Behavioral Patterns: Strategy (P0), Observer / Pub-Sub (P0), State (P1), Command (P1), Chain of Responsibility, Iterator, Template Method",
+              "priority": "P0"
+            },
+            {
+              "name": "Structural Patterns: Adapter / Facade (P1), Decorator / Proxy (P1), Composite (P1), Bridge, Flyweight",
+              "priority": "P1"
+            },
+            {
+              "name": "Anti-overengineering: Recognize when NOT to introduce a design pattern",
+              "priority": "P0"
+            }
+          ],
+          "resources": [
+            {
+              "title": "Refactoring.Guru — The Catalog of Design Patterns",
+              "url": "https://refactoring.guru/design-patterns/catalog",
+              "type": "Guide"
+            }
+          ],
+          "exercises": [
+            "Implement a pluggable Notification Service using Factory + Strategy + Decorator (for retry/logging wrappers).",
+            "Implement an Order workflow using the State pattern instead of nested `if/else` status checks."
+          ],
+          "interviewQuestions": [
+            "How does the Strategy pattern eliminate `switch/if-else` chains and satisfy the Open/Closed Principle?",
+            "Why is the Singleton pattern often considered an anti-pattern for testing, and how does Dependency Injection replace it?"
+          ],
+          "interviewRelevance": "Core backbone of LLD interviews; Strategy, Factory, Observer, State, and Decorator appear in almost every problem.",
+          "completionCriteria": "Can implement top 8 design patterns from memory and justify trade-offs without forcing patterns unnecessarily."
+        },
+        {
+          "id": "p5-lld-api-concurrency",
+          "phaseId": "phase-5",
+          "title": "Component Design, Persistence Boundaries & Thread Safety",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Advanced",
+          "estimatedHours": 10,
+          "originalSection": "6. Low-Level Design & Object-Oriented Design",
+          "summary": "Covers interface-first component contracts, Repository / Unit of Work patterns, fine-grained locking, immutability, atomic operations, and handling mid-interview requirement changes.",
+          "whyImportant": "Senior LLD rounds always probe concurrency (e.g., two users booking the same movie seat simultaneously) and schema/extensibility trade-offs.",
+          "prerequisites": [
+            "p3-os-processes",
+            "p4-testing-debugging",
+            "p4-api-architecture",
+            "p5-design-patterns"
+          ],
+          "unlocks": [
+            "p5-lld-problems"
+          ],
+          "subtopics": [
+            {
+              "name": "Interface-first design, stable public contracts, and dependency injection for testability",
+              "priority": "P0"
+            },
+            {
+              "name": "Repository / Unit of Work patterns, data access layering, and transaction boundaries",
+              "priority": "P0"
+            },
+            {
+              "name": "Thread safety in LLD: fine-grained locks, read-write locks, concurrent maps, immutability, race prevention",
+              "priority": "P0"
+            },
+            {
+              "name": "Demonstrating a requirement change without rewriting the core design",
+              "priority": "P0"
+            }
+          ],
+          "resources": [
+            {
+              "title": "Refactoring.Guru — Design Patterns in Java & Python",
+              "url": "https://refactoring.guru/design-patterns",
+              "type": "Guide"
+            }
+          ],
+          "exercises": [
+            "Write a thread-safe Seat Booking Manager that prevents double-booking under 50 concurrent reservation threads."
+          ],
+          "interviewQuestions": [
+            "How do you prevent two threads from booking the same parking spot or theater seat without locking the entire building?",
+            "How do you structure your classes so switching from an in-memory store to a SQL database requires zero changes to business logic?"
+          ],
+          "interviewRelevance": "Differentiates mid-level and senior candidates in LLD and machine coding rounds.",
+          "completionCriteria": "Can write thread-safe, interface-driven domain services that cleanly adapt to follow-up requirement changes."
+        },
+        {
+          "id": "p5-lld-problems",
+          "phaseId": "phase-5",
+          "title": "Classic Low-Level Design (LLD) Interview Problems",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Advanced",
+          "estimatedHours": 20,
+          "originalSection": "6. Low-Level Design & Object-Oriented Design",
+          "summary": "Hands-on practice across all 12 classic LLD problems from the repository: LRU/LFU Cache, Parking Lot, Rate Limiter, Logging Framework, Notification Service, Elevator, Movie Booking, Splitwise, Vending Machine, In-Memory File System, Chess/Tic-Tac-Toe, and Library Management.",
+          "whyImportant": "Practicing full 45-minute LLD simulations builds the speed needed to define models, apply patterns, and write compilable code under time constraints.",
+          "prerequisites": [
+            "p2-linked-lists",
+            "p2-hash-tables",
+            "p5-ood-modeling",
+            "p5-design-patterns",
+            "p5-lld-api-concurrency"
+          ],
+          "unlocks": [
+            "p6-scalability-lb",
+            "p8-coding-lld-hld-strategy"
+          ],
+          "subtopics": [
+            {
+              "name": "Design a Cache with LRU / LFU eviction policies (HashMap + Doubly Linked List)",
+              "priority": "P0"
+            },
+            {
+              "name": "Design a Rate Limiter (Strategy interface for Token Bucket, Leaky Bucket, Sliding Window)",
+              "priority": "P0"
+            },
+            {
+              "name": "Design a Parking Lot (spot types, pricing strategies, tickets, concurrent entry gates)",
+              "priority": "P0"
+            },
+            {
+              "name": "Design a Logging Framework (appenders, log levels, thread safety) & Notification Framework (channels, retries)",
+              "priority": "P0"
+            },
+            {
+              "name": "Design an In-Memory File System (Composite/Trie directory tree)",
+              "priority": "P0"
+            },
+            {
+              "name": "Design a Movie Ticket Booking System (seat locking with TTL expiry) & Splitwise Expense Sharing System",
+              "priority": "P1"
+            },
+            {
+              "name": "Design an Elevator System (dispatch scheduling), Vending Machine (State pattern), Chess/Tic-Tac-Toe, and Library System",
+              "priority": "P1"
+            }
+          ],
+          "resources": [
+            {
+              "title": "Refactoring.Guru — Practical Pattern Examples",
+              "url": "https://refactoring.guru/design-patterns",
+              "type": "Guide"
+            }
+          ],
+          "exercises": [
+            "Implement compilable, unit-tested solutions for: (1) LRU Cache, (2) Pluggable Rate Limiter, (3) Parking Lot, and (4) Movie Ticket Seat Locking."
+          ],
+          "interviewQuestions": [
+            "Design a Parking Lot that supports motorcycles, cars, and buses, multiple entry gates, and pluggable hourly/flat-rate pricing.",
+            "Design an extensible Rate Limiter library supporting per-user and per-IP quotas with swap-in algorithms."
+          ],
+          "interviewRelevance": "Directly mirrors 100% of OOD/LLD and machine coding interview prompts.",
+          "completionCriteria": "Can complete requirement scoping, class diagramming, and core working code for any of the 12 classic LLD problems in 45 minutes."
+        }
+      ]
+    },
+    {
+      "id": "phase-6",
+      "number": 6,
+      "title": "Phase 6: High-Level Design (HLD) and System Design",
+      "shortTitle": "System Design (HLD)",
+      "subtitle": "Scalability, caching, message queues, database scaling, distributed systems, CAP theorem, and HLD case studies",
+      "difficulty": "Advanced",
+      "estimatedWeeks": "4–6 Weeks",
+      "summary": "Unifies System Architecture (Section 12), System Design (Section 13), Cloud Messaging (Section 3), Distributed File Systems (Section 8), and the 76-question `System Design/Microservices.md` guide, while adding missing CAP/PACELC and classic HLD case studies.",
+      "whyThisOrder": "High-Level Design synthesizes networking (Phase 3), databases/NoSQL (Phase 3), APIs (Phase 4), and component design (Phase 5) to architect distributed systems serving millions of requests.",
+      "file": "roadmap/phase-6-high-level-design-and-system-design.md",
+      "topics": [
+        {
+          "id": "p6-scalability-lb",
+          "phaseId": "phase-6",
+          "title": "Scalability, Load Balancing, CDNs & API Gateways",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Intermediate",
+          "estimatedHours": 12,
+          "originalSection": "13. System Design / 3. Cloud, DevOps & Infrastructure",
+          "summary": "Covers horizontal vs. vertical scaling, stateless service tiers, Consistent Hashing, L4 vs. L7 Load Balancing, DNS/Anycast routing, CDNs, and API Gateways.",
+          "whyImportant": "These are the entry-tier building blocks of every system design architecture diagram.",
+          "prerequisites": [
+            "p3-networking",
+            "p4-api-architecture"
+          ],
+          "unlocks": [
+            "p6-caching-queues",
+            "p6-db-scaling",
+            "p6-microservices-dist",
+            "p6-hld-problems"
+          ],
+          "subtopics": [
+            {
+              "name": "Horizontal vs. Vertical scaling, Stateless vs. Stateful services, and Auto-scaling",
+              "priority": "P0"
+            },
+            {
+              "name": "Consistent Hashing: hash ring, virtual nodes, and minimizing key remapping on node churn",
+              "priority": "P0"
+            },
+            {
+              "name": "Load Balancing: L4 (TCP) vs. L7 (HTTP), Round Robin, Least Connections, Adaptive algorithms, Health checks",
+              "priority": "P0"
+            },
+            {
+              "name": "DNS Load Balancing, Anycast routing, and Content Delivery Networks (Push vs. Pull CDNs)",
+              "priority": "P0"
+            },
+            {
+              "name": "API Gateway: routing, TLS termination, rate limiting, authentication, and request aggregation",
+              "priority": "P0"
+            }
+          ],
+          "resources": [
+            {
+              "title": "System Design Primer — Scalability, Load Balancers & CDNs",
+              "url": "https://github.com/donnemartin/system-design-primer",
+              "type": "Repo"
+            },
+            {
+              "title": "System Design Interview by Alex Xu (Repository Reference)",
+              "url": "https://github.com/aasthas2022/SDE-Interview-and-Prep-Roadmap",
+              "type": "Book"
+            },
+            {
+              "title": "ByteByteGo System Design 101",
+              "url": "https://github.com/ByteByteGoHq/system-design-101",
+              "type": "Repo"
+            }
+          ],
+          "exercises": [
+            "Implement a Consistent Hashing ring with virtual nodes in code and measure key movement when adding/removing 1 of 10 nodes."
+          ],
+          "interviewQuestions": [
+            "How does Consistent Hashing with virtual nodes solve the rehashing storm problem when a cache node crashes?",
+            "What is the difference between a Layer 4 Load Balancer, a Layer 7 Load Balancer, and an API Gateway?"
+          ],
+          "interviewRelevance": "Used in the first 15 minutes of every High-Level System Design interview.",
+          "completionCriteria": "Can diagram edge-to-service traffic flow (DNS -> CDN -> L7 LB -> API Gateway -> Stateless Services) and explain Consistent Hashing."
+        },
+        {
+          "id": "p6-caching-queues",
+          "phaseId": "phase-6",
+          "title": "Distributed Caching, Message Queues & Event-Driven Architecture",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Advanced",
+          "estimatedHours": 14,
+          "originalSection": "12. System Architecture / 13. System Design / 3. Cloud Messaging (Deduplicated)",
+          "summary": "Consolidates duplicated caching and messaging sections into one module covering Cache-Aside, Write-Through/Write-Behind, cache stampede mitigation, RabbitMQ/SQS vs. Kafka/Kinesis, DLQs, and backpressure.",
+          "whyImportant": "Caching scales read-heavy workloads by 10–100x; asynchronous message queues decouple write-heavy and bursty workloads.",
+          "prerequisites": [
+            "p2-hash-tables",
+            "p3-nosql",
+            "p6-scalability-lb"
+          ],
+          "unlocks": [
+            "p6-microservices-dist",
+            "p6-hld-problems"
+          ],
+          "subtopics": [
+            {
+              "name": "Caching Strategies: Cache-Aside, Read-Through, Write-Through, Write-Behind (Write-Back), and Refresh-Ahead",
+              "priority": "P0"
+            },
+            {
+              "name": "Cache Eviction, Invalidation, Hot Keys, and Cache Stampede / Thundering Herd prevention (mutex locks, jittered TTLs)",
+              "priority": "P0"
+            },
+            {
+              "name": "Message Queues (SQS, RabbitMQ): standard vs. FIFO, visibility timeout, retries, poison messages, Dead-Letter Queues (DLQ)",
+              "priority": "P0"
+            },
+            {
+              "name": "Event-Driven Architecture & Streaming (Apache Kafka, Kinesis, SNS/EventBridge): pub/sub fan-out, consumer groups, offset retention",
+              "priority": "P0"
+            },
+            {
+              "name": "Delivery guarantees (at-most-once, at-least-once, exactly-once), deduplication, and backpressure",
+              "priority": "P0"
+            }
+          ],
+          "resources": [
+            {
+              "title": "System Design Primer — Cache & Asynchronous Queues",
+              "url": "https://github.com/donnemartin/system-design-primer",
+              "type": "Repo"
+            },
+            {
+              "title": "Designing Data-Intensive Applications by Martin Kleppmann (Repository Reference)",
+              "url": "https://github.com/aasthas2022/SDE-Interview-and-Prep-Roadmap",
+              "type": "Book"
+            }
+          ],
+          "exercises": [
+            "Design a cache layer that prevents cache stampede on hot keys and handles database-cache consistency during writes."
+          ],
+          "interviewQuestions": [
+            "Compare Cache-Aside vs. Write-Through vs. Write-Behind caching: what are the consistency and data-loss risks of each?",
+            "When do you choose a log-based event stream like Kafka over a traditional message queue like RabbitMQ or SQS?"
+          ],
+          "interviewRelevance": "Redis caching strategies and Kafka/SQS queue trade-offs appear in nearly 90% of HLD interviews.",
+          "completionCriteria": "Can select the right caching pattern and message broker (SQS vs. Kafka) and handle hot keys, stampedes, and poison messages."
+        },
+        {
+          "id": "p6-db-scaling",
+          "phaseId": "phase-6",
+          "title": "Database Scaling: Replication, Partitioning (Sharding) & Distributed Storage",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Advanced",
+          "estimatedHours": 14,
+          "originalSection": "5. Databases / 8. Operating Systems / 13. System Design",
+          "summary": "Covers read replicas, leader-follower/multi-leader/leaderless replication, horizontal sharding strategies, hot shards, cross-shard joins, and distributed file/object systems (HDFS, Ceph, S3).",
+          "whyImportant": "The stateful data tier is the hardest part of any system to scale horizontally.",
+          "prerequisites": [
+            "p3-dbms-sql",
+            "p3-db-indexing",
+            "p3-nosql",
+            "p6-scalability-lb"
+          ],
+          "unlocks": [
+            "p6-microservices-dist",
+            "p6-hld-problems"
+          ],
+          "subtopics": [
+            {
+              "name": "Replication: Single-Leader (Leader-Follower), Multi-Leader, and Leaderless (Dynamo-style quorum R + W > N)",
+              "priority": "P0"
+            },
+            {
+              "name": "Replication lag anomalies and Consistency models (Read-after-write, Monotonic reads, Eventual consistency)",
+              "priority": "P0"
+            },
+            {
+              "name": "Partitioning / Sharding: Range-based vs. Hash-based sharding, directory-based routing, and hot-partition mitigation",
+              "priority": "P0"
+            },
+            {
+              "name": "Distributed File & Object Storage: HDFS, Ceph, and S3 object storage architecture (moved from OS section)",
+              "priority": "P1"
+            }
+          ],
+          "resources": [
+            {
+              "title": "Designing Data-Intensive Applications — Chapters 5 & 6 (Replication & Partitioning)",
+              "url": "https://github.com/aasthas2022/SDE-Interview-and-Prep-Roadmap",
+              "type": "Book"
+            },
+            {
+              "title": "System Design Primer — Database Replication & Sharding",
+              "url": "https://github.com/donnemartin/system-design-primer",
+              "type": "Repo"
+            }
+          ],
+          "exercises": [
+            "Design a sharding key and hot-celebrity mitigation strategy for a 500M-user social media posts table."
+          ],
+          "interviewQuestions": [
+            "How do you handle replication lag when a user updates their profile and immediately refreshes the page (read-your-own-writes)?",
+            "What causes a 'hot shard' (celebrity problem) in a hash-partitioned database, and how do key salting or read caches fix it?"
+          ],
+          "interviewRelevance": "Sharding keys, replication lag, and quorum math are central to senior system design interviews.",
+          "completionCriteria": "Can choose partition keys, calculate quorum consistency (R + W > N), and mitigate replication lag and hot partitions."
+        },
+        {
+          "id": "p6-microservices-dist",
+          "phaseId": "phase-6",
+          "title": "Microservices, Distributed Systems & CAP / Consensus",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Advanced",
+          "estimatedHours": 16,
+          "originalSection": "12. System Architecture / 13. System Design / System Design/Microservices.md",
+          "summary": "Covers CAP & PACELC theorems, consensus & leader election (Raft/Paxos), distributed transactions (Saga choreography vs. orchestration, 2PC, Outbox pattern), CQRS, Event Sourcing, Circuit Breakers, Service Mesh, and the preserved 76 Microservices Interview Q&A.",
+          "whyImportant": "Distributed systems trade off consistency, availability, and latency under network partitions; mastering these trade-offs is the core of HLD.",
+          "prerequisites": [
+            "p6-scalability-lb",
+            "p6-caching-queues",
+            "p6-db-scaling"
+          ],
+          "unlocks": [
+            "p6-hld-problems",
+            "p7-observability-sre"
+          ],
+          "subtopics": [
+            {
+              "name": "CAP Theorem (Consistency, Availability, Partition Tolerance) & PACELC Theorem (Latency vs. Consistency)",
+              "priority": "P0",
+              "added": true
+            },
+            {
+              "name": "ACID vs. BASE, Eventual Consistency, and Consensus / Leader Election (Paxos, Raft, ZooKeeper/etcd)",
+              "priority": "P0"
+            },
+            {
+              "name": "Microservices Patterns: Service Discovery, Circuit Breaker, Bulkhead, Sidecar, Service Mesh (Istio/Linkerd), Strangler Fig",
+              "priority": "P0"
+            },
+            {
+              "name": "Distributed Transactions: Two-Phase Commit (2PC), Saga Pattern (Choreography vs. Orchestration), Transactional Outbox",
+              "priority": "P0"
+            },
+            {
+              "name": "Event Sourcing & CQRS (Command Query Responsibility Segregation)",
+              "priority": "P1"
+            },
+            {
+              "name": "Top 76 Microservices Architecture Interview Questions (Preserved from `System Design/Microservices.md`)",
+              "priority": "P0"
+            }
+          ],
+          "resources": [
+            {
+              "title": "Microservices Architecture & Top 76 Q&A (Original Repository Guide)",
+              "url": "https://github.com/aasthas2022/SDE-Interview-and-Prep-Roadmap/blob/main/System%20Design/Microservices.md",
+              "type": "Repo Guide"
+            },
+            {
+              "title": "System Design Primer — Microservices & CAP Theorem",
+              "url": "https://github.com/donnemartin/system-design-primer",
+              "type": "Repo"
+            }
+          ],
+          "exercises": [
+            "Design an Order -> Payment -> Inventory Saga workflow using both Choreography and Orchestration, detailing compensating rollback actions for each failure step."
+          ],
+          "interviewQuestions": [
+            "In a distributed system experiencing a network partition, explain why you must choose between CP and AP, and give a real banking vs. social feed example.",
+            "How does the Saga pattern with a Transactional Outbox maintain eventual consistency across microservices without 2-Phase Commit locks?"
+          ],
+          "interviewRelevance": "Directly tested in all mid-level, senior, and staff HLD interviews.",
+          "completionCriteria": "Can defend CP vs. AP choices, design Saga workflows, and answer the repository's 76 microservices architecture questions."
+        },
+        {
+          "id": "p6-hld-problems",
+          "phaseId": "phase-6",
+          "title": "Practical System Design (HLD) Interview Case Studies",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Advanced",
+          "estimatedHours": 20,
+          "originalSection": "13. System Design (Expanded with Practical Interview Case Studies)",
+          "summary": "Applies back-of-the-envelope capacity estimation (QPS, bandwidth, storage, p95 latency) and end-to-end architecture design to the most frequently asked HLD interview problems.",
+          "whyImportant": "System Design interviews require structuring a 45-minute deep dive from requirements and capacity math to APIs, data model, high-level diagram, and bottleneck resolution.",
+          "prerequisites": [
+            "p6-scalability-lb",
+            "p6-caching-queues",
+            "p6-db-scaling",
+            "p6-microservices-dist"
+          ],
+          "unlocks": [
+            "p7-cloud-fundamentals",
+            "p8-coding-lld-hld-strategy"
+          ],
+          "subtopics": [
+            {
+              "name": "4-Step HLD Framework: Requirements & Scope -> Capacity Estimation (QPS/Storage) -> High-Level Design -> Deep Dive & Bottlenecks",
+              "priority": "P0",
+              "added": true
+            },
+            {
+              "name": "Design a URL Shortener (TinyURL) & Design a Distributed Rate Limiter",
+              "priority": "P0",
+              "added": true
+            },
+            {
+              "name": "Design a Social Media News Feed (Twitter/Instagram fan-out-on-write vs. hybrid fan-out-on-read)",
+              "priority": "P0",
+              "added": true
+            },
+            {
+              "name": "Design a Real-Time Chat System (WhatsApp/Slack WebSockets, presence, message ordering)",
+              "priority": "P0",
+              "added": true
+            },
+            {
+              "name": "Design a Notification Service, Web Crawler, Payment System (idempotency & ledger), and Proximity/Ride-Sharing (QuadTree/Geohash)",
+              "priority": "P1",
+              "added": true
+            }
+          ],
+          "resources": [
+            {
+              "title": "System Design Primer — System Design Interview Solutions",
+              "url": "https://github.com/donnemartin/system-design-primer",
+              "type": "Repo"
+            },
+            {
+              "title": "ByteByteGo — How to Ace System Design Interviews",
+              "url": "https://github.com/ByteByteGoHq/system-design-101",
+              "type": "Guide"
+            }
+          ],
+          "exercises": [
+            "Whiteboard complete 45-minute designs (with QPS/storage math, schema, APIs, and component diagram) for: (1) TinyURL, (2) Twitter News Feed, (3) WhatsApp Chat, and (4) Payment Gateway."
+          ],
+          "interviewQuestions": [
+            "In a Twitter/Instagram News Feed, why does pure fan-out-on-write fail for users with 50 million followers, and how does a hybrid push/pull model solve it?",
+            "How do you guarantee zero duplicate charges and exact ledger reconciliation in a distributed Payment System?"
+          ],
+          "interviewRelevance": "Directly decides leveling (SDE-1 vs. SDE-2 vs. Senior SDE) in technical loops.",
+          "completionCriteria": "Can drive a 45-minute HLD discussion unprompted, covering capacity math, APIs, data model, scaling, and failure modes."
+        }
+      ]
+    },
+    {
+      "id": "phase-7",
+      "number": 7,
+      "title": "Phase 7: Software Engineering Ecosystem",
+      "shortTitle": "Engineering Ecosystem",
+      "subtitle": "Cloud architecture, Docker, Kubernetes, CI/CD, IaC, Security engineering, and SRE observability",
+      "difficulty": "Advanced",
+      "estimatedWeeks": "3–4 Weeks",
+      "summary": "Consolidates Cloud, DevOps & Infrastructure (Section 3), Security Engineering & Authentication (Section 11), and Testing, Reliability & Observability (Section 14) into the production engineering ecosystem.",
+      "whyThisOrder": "Once you understand how distributed systems are designed (Phase 6), Phase 7 teaches how they are deployed, containerized, secured, monitored, and operated in cloud production environments.",
+      "file": "roadmap/phase-7-software-engineering-ecosystem.md",
+      "topics": [
+        {
+          "id": "p7-cloud-fundamentals",
+          "phaseId": "phase-7",
+          "title": "Cloud Computing, Compute, Storage & Cloud Networking",
+          "priority": "Should Learn",
+          "priorityCode": "P1",
+          "difficulty": "Intermediate",
+          "estimatedHours": 12,
+          "originalSection": "3. Cloud, DevOps & Infrastructure",
+          "summary": "Covers IaaS/PaaS/SaaS, regions/AZs, RTO/RPO disaster recovery, VPC networking, IAM least privilege, compute choices (EC2, ECS/Fargate, EKS, Lambda), and managed storage (S3, EBS, EFS, RDS, DynamoDB, ElastiCache).",
+          "whyImportant": "Modern backend systems run on cloud primitives; interviews test practical trade-offs like Serverless vs. Containers and S3 vs. EBS.",
+          "prerequisites": [
+            "p3-networking",
+            "p6-scalability-lb",
+            "p6-db-scaling"
+          ],
+          "unlocks": [
+            "p7-containers-k8s",
+            "p7-cicd-iac",
+            "p7-security"
+          ],
+          "subtopics": [
+            {
+              "name": "Cloud fundamentals: Regions, Availability Zones, High Availability vs. Disaster Recovery (RTO & RPO), IaaS/PaaS/SaaS",
+              "priority": "P1"
+            },
+            {
+              "name": "Compute decisions: EC2 vs. ECS/Fargate vs. EKS vs. AWS Lambda (triggers, cold starts, concurrency, idempotency)",
+              "priority": "P0"
+            },
+            {
+              "name": "Storage decisions: EBS vs. EFS vs. S3 (versioning, lifecycle, presigned URLs), RDS/Aurora failover, DynamoDB, ElastiCache",
+              "priority": "P0"
+            },
+            {
+              "name": "Cloud Networking & Identity: VPC, public/private subnets, NAT/IGW, Security Groups vs. NACLs, IAM roles & temporary credentials",
+              "priority": "P1"
+            },
+            {
+              "name": "Cost & Capacity: Capacity planning (throughput/p95), Reserved vs. On-Demand vs. Spot, multi-region drills",
+              "priority": "P1"
+            }
+          ],
+          "resources": [
+            {
+              "title": "ByteByteGo System Design 101 — Cloud & Infrastructure Guides",
+              "url": "https://github.com/ByteByteGoHq/system-design-101",
+              "type": "Repo"
+            }
+          ],
+          "exercises": [
+            "Diagram a production multi-AZ VPC architecture with public ALB/NAT subnets, private app subnets, and isolated RDS database subnets."
+          ],
+          "interviewQuestions": [
+            "When would you choose AWS Lambda over ECS/Kubernetes, and when do Lambda cold starts or cost models make containers better?",
+            "How do S3 Presigned URLs allow clients to upload large media files directly to object storage without bottlenecking your API servers?"
+          ],
+          "interviewRelevance": "Essential for cloud-native backend and system design discussions.",
+          "completionCriteria": "Can compare cloud compute/storage options and design secure VPC/IAM topologies."
+        },
+        {
+          "id": "p7-containers-k8s",
+          "phaseId": "phase-7",
+          "title": "Docker Containerization & Kubernetes Orchestration",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Intermediate",
+          "estimatedHours": 12,
+          "originalSection": "3. Cloud, DevOps & Infrastructure",
+          "summary": "Covers Docker images, layers, multi-stage builds, container security/isolation, and Kubernetes architecture (Pods, Deployments, Services, Ingress, ConfigMaps/Secrets, Probes, HPA, and troubleshooting).",
+          "whyImportant": "Containers and Kubernetes are the industry standard for packaging and scaling backend services.",
+          "prerequisites": [
+            "p4-linux-cli",
+            "p7-cloud-fundamentals"
+          ],
+          "unlocks": [
+            "p7-cicd-iac",
+            "p7-observability-sre"
+          ],
+          "subtopics": [
+            {
+              "name": "Docker: Images, layers, registries, Dockerfiles, multi-stage builds, build caching, and non-root container security",
+              "priority": "P0"
+            },
+            {
+              "name": "Container networking, volumes, cgroups resource limits, and namespace isolation",
+              "priority": "P1"
+            },
+            {
+              "name": "Kubernetes Core: Pods, Deployments, ReplicaSets, Services, Ingress, ConfigMaps, Secrets, Namespaces, and RBAC",
+              "priority": "P0"
+            },
+            {
+              "name": "Kubernetes Operations: Liveness/Readiness/Startup probes, resource requests/limits, HPA, StatefulSets, and debugging CrashLoopBackOff",
+              "priority": "P0"
+            }
+          ],
+          "resources": [
+            {
+              "title": "Docker Official Get Started Documentation",
+              "url": "https://docs.docker.com/get-started/",
+              "type": "Official Docs"
+            },
+            {
+              "title": "Kubernetes Official Tutorials & Basics",
+              "url": "https://kubernetes.io/docs/tutorials/kubernetes-basics/",
+              "type": "Official Docs"
+            }
+          ],
+          "exercises": [
+            "Write a multi-stage Dockerfile for a backend API that runs as a non-root user and reduces image size by >60%.",
+            "Write Kubernetes Deployment, Service, and HPA manifests with readiness and liveness probes."
+          ],
+          "interviewQuestions": [
+            "What is the difference between a Kubernetes Liveness Probe and a Readiness Probe, and what happens if a Readiness Probe fails?",
+            "How would you debug a Pod stuck in `CrashLoopBackOff` or `Pending` state?"
+          ],
+          "interviewRelevance": "Frequently asked in backend, platform, and microservices interviews.",
+          "completionCriteria": "Can write optimized multi-stage Dockerfiles and troubleshoot Kubernetes Pod/Deployment lifecycles."
+        },
+        {
+          "id": "p7-cicd-iac",
+          "phaseId": "phase-7",
+          "title": "CI/CD Release Engineering & Infrastructure as Code (IaC)",
+          "priority": "Should Learn",
+          "priorityCode": "P1",
+          "difficulty": "Intermediate",
+          "estimatedHours": 8,
+          "originalSection": "3. Cloud, DevOps & Infrastructure",
+          "summary": "Covers automated build/test/deploy pipelines, GitHub Actions, safe deployment strategies (Blue-Green, Canary, Rolling, Feature Flags), backward-compatible DB migrations, and Terraform/CDK IaC.",
+          "whyImportant": "Shipping code safely without downtime requires automated quality gates, progressive rollouts, and reproducible infrastructure.",
+          "prerequisites": [
+            "p4-git-vcs",
+            "p4-testing-debugging",
+            "p7-containers-k8s"
+          ],
+          "unlocks": [
+            "p7-observability-sre"
+          ],
+          "subtopics": [
+            {
+              "name": "CI/CD pipelines, quality gates, and GitHub Actions (workflows, runners, permissions, artifacts)",
+              "priority": "P1"
+            },
+            {
+              "name": "Zero-downtime releases: Blue-Green, Canary, Rolling deployments, Feature Flags, and safe backward-compatible DB migrations",
+              "priority": "P0"
+            },
+            {
+              "name": "Infrastructure as Code (IaC): Terraform vs. CloudFormation/CDK, remote state locking, drift detection, secrets handling",
+              "priority": "P1"
+            },
+            {
+              "name": "Supply-chain security, dependency scanning, and artifact provenance",
+              "priority": "P2"
+            }
+          ],
+          "resources": [
+            {
+              "title": "ByteByteGo System Design 101 — CI/CD & Deployment Strategies",
+              "url": "https://github.com/ByteByteGoHq/system-design-101",
+              "type": "Repo"
+            }
+          ],
+          "exercises": [
+            "Create a GitHub Actions workflow that runs lint, unit tests, builds a container image, and deploys on main branch push."
+          ],
+          "interviewQuestions": [
+            "How do you perform a zero-downtime database schema migration (such as renaming a column) while old and new service versions run simultaneously (Expand-and-Contract pattern)?",
+            "Compare Blue-Green deployment vs. Canary deployment vs. Feature Flags."
+          ],
+          "interviewRelevance": "Zero-downtime deployment and backward-compatible schema migrations are classic senior SDE questions.",
+          "completionCriteria": "Can design CI/CD pipelines and explain Expand-and-Contract database migrations and Canary rollouts."
+        },
+        {
+          "id": "p7-security",
+          "phaseId": "phase-7",
+          "title": "Security Engineering, AuthN/AuthZ & Cryptography",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Advanced",
+          "estimatedHours": 12,
+          "originalSection": "11. Security Engineering & Authentication",
+          "summary": "Covers Authentication vs. Authorization, OAuth 2.0 + PKCE, OIDC, JWTs, Sessions/Cookies, RBAC/ABAC, OWASP Top 10 (SQLi, XSS, CSRF, SSRF, BOLA/IDOR), TLS/mTLS, and password/data encryption.",
+          "whyImportant": "Security vulnerabilities can compromise an entire company; every backend engineer must know how to authenticate requests and prevent OWASP Top 10 attacks.",
+          "prerequisites": [
+            "p3-networking",
+            "p4-api-architecture"
+          ],
+          "unlocks": [
+            "p7-observability-sre",
+            "p9-agentic-ai"
+          ],
+          "subtopics": [
+            {
+              "name": "AuthN & AuthZ: Sessions/Cookies (HttpOnly, Secure, SameSite) vs. JWTs (claims, signature, rotation), OAuth 2.0 (Auth Code + PKCE), OIDC, SSO/MFA/Passkeys",
+              "priority": "P0"
+            },
+            {
+              "name": "Access Control: RBAC vs. ABAC, Broken Object-Level Authorization (BOLA/IDOR), and service-to-service workload identity",
+              "priority": "P0"
+            },
+            {
+              "name": "Application Security & OWASP Top 10: SQL/NoSQL Injection, XSS & CSP, CSRF, SSRF, CORS, rate limiting, and safe deserialization",
+              "priority": "P0"
+            },
+            {
+              "name": "Cryptography & Data Protection: TLS/mTLS handshake, symmetric vs. asymmetric encryption, envelope encryption, KMS, password hashing (Argon2/bcrypt + salt)",
+              "priority": "P0"
+            },
+            {
+              "name": "Threat modeling (STRIDE), least privilege, SAST/DAST/SCA, and tamper-evident security audit logs",
+              "priority": "P1"
+            }
+          ],
+          "resources": [
+            {
+              "title": "OWASP Top 10 Application Security Risks",
+              "url": "https://owasp.org/www-project-top-ten/2017/Application_Security_Risks",
+              "type": "Official Docs"
+            }
+          ],
+          "exercises": [
+            "Audit a sample REST API for SQL Injection, IDOR/BOLA, XSS, and insecure JWT storage, and patch each vulnerability."
+          ],
+          "interviewQuestions": [
+            "Compare stateful session cookies vs. stateless JWTs: how do you handle immediate token revocation when a user logs out or is compromised?",
+            "Explain how OAuth 2.0 Authorization Code flow with PKCE works and how OIDC builds identity on top of OAuth 2.0."
+          ],
+          "interviewRelevance": "JWT vs. Sessions, OAuth 2.0, TLS, and SQLi/XSS/CSRF are asked in almost every backend and system design loop.",
+          "completionCriteria": "Can design secure AuthN/AuthZ flows, explain TLS & Argon2/bcrypt, and mitigate OWASP Top 10 vulnerabilities."
+        },
+        {
+          "id": "p7-observability-sre",
+          "phaseId": "phase-7",
+          "title": "Observability, Performance Optimization & Reliability (SRE)",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Advanced",
+          "estimatedHours": 12,
+          "originalSection": "14. Testing, Reliability & Observability",
+          "summary": "Covers the 3 pillars of observability (Structured Logs, Metrics, Distributed Tracing with OpenTelemetry), RED/USE methods, SLIs/SLOs/SLAs, error budgets, resilience patterns (retries with jitter, backpressure, circuit breakers), load testing, and incident response.",
+          "whyImportant": "Designing reliable systems requires knowing how to measure p99 latency, correlate traces across services, and prevent retry storms during outages.",
+          "prerequisites": [
+            "p6-microservices-dist",
+            "p7-containers-k8s"
+          ],
+          "unlocks": [
+            "p8-coding-lld-hld-strategy",
+            "p9-agentic-ai"
+          ],
+          "subtopics": [
+            {
+              "name": "Three Pillars of Observability: Structured Logging (correlation IDs), Metrics (cardinality, histograms), and Distributed Tracing (OpenTelemetry spans)",
+              "priority": "P0"
+            },
+            {
+              "name": "Monitoring methodologies: RED (Rate, Errors, Duration), USE (Utilization, Saturation, Errors), and burn-rate alerting",
+              "priority": "P1"
+            },
+            {
+              "name": "SRE & Resilience: SLIs, SLOs, SLAs, Error Budgets, Exponential Backoff with Jitter, Circuit Breakers, Bulkheads, Graceful Degradation",
+              "priority": "P0"
+            },
+            {
+              "name": "Performance Engineering: Load vs. Stress vs. Soak vs. Spike testing, p50/p95/p99 tail latency, CPU/memory/DB query profiling",
+              "priority": "P0"
+            },
+            {
+              "name": "Incident Excellence: Triage, mitigation, rollback, root-cause analysis, and blameless postmortems",
+              "priority": "P1"
+            }
+          ],
+          "resources": [
+            {
+              "title": "OpenTelemetry Official Documentation",
+              "url": "https://opentelemetry.io/docs/",
+              "type": "Official Docs"
+            }
+          ],
+          "exercises": [
+            "Instrument a two-service HTTP application with correlation IDs, structured JSON logs, and latency histograms, and write an exponential backoff + jitter retry client."
+          ],
+          "interviewQuestions": [
+            "Why must exponential backoff retries always include random jitter during a partial downstream outage?",
+            "What is the difference between an SLI, an SLO, and an SLA, and why is average latency a dangerous metric compared to p95/p99?"
+          ],
+          "interviewRelevance": "Heavily tested in System Design, Backend, and Operational Excellence / SRE rounds.",
+          "completionCriteria": "Can define SLIs/SLOs, instrument logs/metrics/traces, and prevent cascading failures with jittered retries and circuit breakers."
+        }
+      ]
+    },
+    {
+      "id": "phase-8",
+      "number": 8,
+      "title": "Phase 8: Interview Preparation & Execution",
+      "shortTitle": "Interview Preparation",
+      "subtitle": "DSA pattern mastery, interview communication, behavioral STAR stories, resume prep, and revision plans",
+      "difficulty": "Advanced",
+      "estimatedWeeks": "3–4 Weeks",
+      "summary": "Transforms raw technical knowledge from Phases 1–7 into interview performance: pattern recognition under time pressure, structured communication, behavioral leadership stories, resume impact, and timed mock execution.",
+      "whyThisOrder": "Placed as the capstone phase so candidates synthesize their coding, LLD, HLD, and production engineering skills into timed, high-signal interview delivery.",
+      "file": "roadmap/phase-8-interview-preparation.md",
+      "topics": [
+        {
+          "id": "p8-dsa-patterns",
+          "phaseId": "phase-8",
+          "title": "Coding Interview Strategy & 15 Core DSA Practice Patterns",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Advanced",
+          "estimatedHours": 20,
+          "originalSection": "9. Problem-solving and Coding / Interview Readiness Assessment",
+          "summary": "Maps coding prompts to the 15 recurring DSA patterns (Two Pointers, Sliding Window, Fast/Slow Pointers, Merge Intervals, Cyclic Sort, Monotonic Stack, Top-K Heap, Tree BFS/DFS, Graph Topo Sort/Union-Find, Binary Search on Answer, Backtracking, and 1D/2D DP).",
+          "whyImportant": "In a 45-minute coding round, recognizing the underlying pattern in 2–3 minutes leaves 35+ minutes for clean implementation, dry-running, and complexity analysis.",
+          "prerequisites": [
+            "p2-backtracking-dp",
+            "p2-advanced-dsa"
+          ],
+          "unlocks": [
+            "p8-coding-lld-hld-strategy",
+            "p8-revision-plans"
+          ],
+          "subtopics": [
+            {
+              "name": "Pattern recognition matrix: mapping problem constraints (N <= 20 vs. N <= 10^5) to target time complexity",
+              "priority": "P0",
+              "added": true
+            },
+            {
+              "name": "45-Minute Coding Protocol: Clarify constraints (3m) -> Approach & complexity (5m) -> Clean code (25m) -> Dry run & edge cases (7m)",
+              "priority": "P0",
+              "added": true
+            },
+            {
+              "name": "Curated 75 / 150 problem sheet mastery across all 15 patterns without hints",
+              "priority": "P0",
+              "added": true
+            }
+          ],
+          "resources": [
+            {
+              "title": "NeetCode 150 & Pattern Roadmap",
+              "url": "https://neetcode.io/roadmap",
+              "type": "Interactive"
+            },
+            {
+              "title": "Tech Interview Handbook — Grind 75 & Coding Interview Rubric",
+              "url": "https://www.techinterviewhandbook.org/",
+              "type": "Guide"
+            }
+          ],
+          "exercises": [
+            "Complete 5 timed 45-minute coding sessions solving two unseen Medium/Hard problems back-to-back while speaking your thought process aloud."
+          ],
+          "interviewQuestions": [
+            "If input size N = 10^5, which time complexities are acceptable (O(N), O(N log N)) and why will O(N^2) time out?",
+            "What edge cases should you always test before telling the interviewer your code is complete?"
+          ],
+          "interviewRelevance": "Directly governs pass rates in OA, phone screen, and onsite coding rounds.",
+          "completionCriteria": "Can solve Medium DSA problems in <25 minutes while articulating invariants, edge cases, and exact complexity."
+        },
+        {
+          "id": "p8-coding-lld-hld-strategy",
+          "phaseId": "phase-8",
+          "title": "Technical Communication, Mock Interviews & Design Rubrics",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Advanced",
+          "estimatedHours": 10,
+          "originalSection": "Interview Readiness Assessment (Expanded)",
+          "summary": "Covers how interviewers score rubrics across Coding, LLD, and HLD rounds, how to drive trade-off discussions, handle hints gracefully, and apply the repository's 6-point Interview Readiness Assessment.",
+          "whyImportant": "Many strong engineers fail interviews due to silent coding, jumping into implementation before clarifying scope, or failing to defend trade-offs.",
+          "prerequisites": [
+            "p5-lld-problems",
+            "p6-hld-problems",
+            "p8-dsa-patterns"
+          ],
+          "unlocks": [
+            "p8-revision-plans"
+          ],
+          "subtopics": [
+            {
+              "name": "Repository 6-Point Interview Readiness Self-Assessment (0–4 scale: aim for 3+ on all P0 topics)",
+              "priority": "P0"
+            },
+            {
+              "name": "Driving LLD & HLD interviews: pacing the 45-minute clock, proposing trade-offs proactively, and checking in with the interviewer",
+              "priority": "P0",
+              "added": true
+            },
+            {
+              "name": "Mock interview feedback loop: recording and auditing communication clarity, hint reception, and bug discovery",
+              "priority": "P1",
+              "added": true
+            }
+          ],
+          "resources": [
+            {
+              "title": "Tech Interview Handbook — Communication & Self-Introduction",
+              "url": "https://www.techinterviewhandbook.org/",
+              "type": "Guide"
+            }
+          ],
+          "exercises": [
+            "Complete 3 full mock interviews (1 DSA, 1 LLD, 1 HLD) and score yourself against the 6-point Readiness Rubric."
+          ],
+          "interviewQuestions": [
+            "How do you recover in an interview when your initial approach hits a dead end or the interviewer points out a flaw?",
+            "How do you structure a 2-minute explanation of your most complex past architecture project?"
+          ],
+          "interviewRelevance": "Determines hiring committee calibration and leveling decisions.",
+          "completionCriteria": "Achieves Level 3+ ('Explain and apply unaided') across all Must-Learn (P0) topics in the Readiness Assessment."
+        },
+        {
+          "id": "p8-behavioral-resume",
+          "phaseId": "phase-8",
+          "title": "Behavioral Interviews (STAR Method), Leadership & Resume Prep",
+          "priority": "Must Learn",
+          "priorityCode": "P0",
+          "difficulty": "Intermediate",
+          "estimatedHours": 8,
+          "originalSection": "Features: Behavioral & Tailored Preparation (Expanded)",
+          "summary": "Covers engineering resume optimization (impact-first XYZ bullets), building a 6–8 story matrix using the STAR framework (Situation, Task, Action, Result), conflict resolution, failure/postmortem stories, and company-specific values.",
+          "whyImportant": "Behavioral and leadership rounds carry veto power at top tech companies and often decide between adjacent levels (e.g., L4 vs. L5).",
+          "prerequisites": [],
+          "unlocks": [
+            "p8-revision-plans"
+          ],
+          "subtopics": [
+            {
+              "name": "Engineering Resume optimization: Action + Metric + Technical Context (XYZ formula) and ATS clarity",
+              "priority": "P0",
+              "added": true
+            },
+            {
+              "name": "STAR Story Matrix: Ownership, Technical Disagreement, Tight Deadline, Production Incident/Failure, Mentorship, Ambiguity",
+              "priority": "P0",
+              "added": true
+            },
+            {
+              "name": "Company-specific preparation: Amazon Leadership Principles, Google Googleyness, Meta Engineering Execution",
+              "priority": "P1",
+              "added": true
+            }
+          ],
+          "resources": [
+            {
+              "title": "Tech Interview Handbook — Resume & Behavioral Interview Guide",
+              "url": "https://www.techinterviewhandbook.org/",
+              "type": "Guide"
+            }
+          ],
+          "exercises": [
+            "Write out 6 distinct STAR stories from your projects/experience, each with quantifiable outcomes and a 'What I learned' reflection."
+          ],
+          "interviewQuestions": [
+            "Tell me about a time you disagreed with a senior engineer or manager on a technical design. How did you resolve it?",
+            "Tell me about a production bug or project failure you owned, how you mitigated it, and what systemic fix you put in place."
+          ],
+          "interviewRelevance": "Tested in hiring manager screens and dedicated behavioral / bar-raiser rounds.",
+          "completionCriteria": "Has a polished 1-page resume and 6 rehearsed STAR stories adaptable to any behavioral prompt."
+        },
+        {
+          "id": "p8-revision-plans",
+          "phaseId": "phase-8",
+          "title": "Structured Interview Revision Plans (4-Week, 8-Week & 12-Week)",
+          "priority": "Should Learn",
+          "priorityCode": "P1",
+          "difficulty": "Intermediate",
+          "estimatedHours": 6,
+          "originalSection": "How to Use & Tailored Preparation (Expanded)",
+          "summary": "Provides actionable week-by-week revision schedules (4-week sprint for experienced engineers, 8-week balanced plan, and 12-week beginner-to-advanced plan) plus final-week cheatsheets.",
+          "whyImportant": "Spaced repetition prevents forgetting Phase 2 DSA patterns while studying Phase 6–7 System Design and Cloud topics.",
+          "prerequisites": [
+            "p8-dsa-patterns",
+            "p8-coding-lld-hld-strategy",
+            "p8-behavioral-resume"
+          ],
+          "unlocks": [
+            "p9-agentic-ai"
+          ],
+          "subtopics": [
+            {
+              "name": "12-Week Comprehensive Track (Beginner to SDE-1/SDE-2)",
+              "priority": "P0",
+              "added": true
+            },
+            {
+              "name": "8-Week Accelerated Track (Intermediate SDE Refresher)",
+              "priority": "P1",
+              "added": true
+            },
+            {
+              "name": "4-Week High-Yield Sprint (P0 Must-Learn Topics + Daily Timed Drills)",
+              "priority": "P1",
+              "added": true
+            }
+          ],
+          "resources": [
+            {
+              "title": "Tech Interview Handbook — Study Plans",
+              "url": "https://www.techinterviewhandbook.org/",
+              "type": "Guide"
+            }
+          ],
+          "exercises": [
+            "Select your target timeline (4, 8, or 12 weeks) and bookmark your weekly topic targets in the Interactive Learning Dashboard."
+          ],
+          "interviewQuestions": [
+            "Self-check: Can you explain every P0 topic in Phases 1–7 in under 2 minutes without notes?"
+          ],
+          "interviewRelevance": "Keeps preparation consistent and measurable right up to interview day.",
+          "completionCriteria": "Completed a full revision cycle across all P0 topics with >85% readiness score."
+        }
+      ]
+    },
+    {
+      "id": "phase-9",
+      "number": 9,
+      "title": "Optional Specialization: Agentic AI, LLM Engineering & AI System Design",
+      "shortTitle": "Agentic AI & LLM Track",
+      "subtitle": "LLMs, RAG, prompt/tool engineering, multi-agent orchestration, evaluation, and AI system design",
+      "difficulty": "Advanced",
+      "estimatedWeeks": "3–4 Weeks (Optional)",
+      "summary": "Preserves 100% of the original repository's Section 1 ('Agentic AI, LLM Engineering, and AI System Design') plus the LLM Security (Section 11) and LLM Evaluation (Section 14) checklists, repositioned from Section 1 to an advanced post-core specialization track so beginners are never overwhelmed early.",
+      "whyThisOrder": "Building production RAG pipelines and multi-agent architectures requires solid foundations in APIs, databases/vector indexes, distributed caching, queues, security, and observability from Phases 1–7.",
+      "file": "roadmap/track-9-agentic-ai-and-llm-engineering.md",
+      "topics": [
+        {
+          "id": "p9-llm-rag",
+          "phaseId": "phase-9",
+          "title": "LLM Fundamentals, Prompt Engineering & RAG Architectures",
+          "priority": "Optional / Advanced",
+          "priorityCode": "P2",
+          "difficulty": "Advanced",
+          "estimatedHours": 14,
+          "originalSection": "1. Agentic AI, LLM Engineering, and AI System Design",
+          "summary": "Covers Transformer/token fundamentals, model selection, structured JSON schema outputs, function/tool calling, embeddings, vector indexes (HNSW, IVF), chunking, hybrid BM25 + dense retrieval, reranking, and RAG evaluation.",
+          "whyImportant": "Essential for AI Engineer, Applied LLM, and modern backend SDE roles building AI-powered features.",
+          "prerequisites": [
+            "p4-api-architecture",
+            "p6-db-scaling",
+            "p7-security"
+          ],
+          "unlocks": [
+            "p9-agentic-ai"
+          ],
+          "subtopics": [
+            {
+              "name": "LLM Fundamentals: Transformers, attention, tokens/context windows, temperature/top-p, closed vs. open-weight, Prompting vs. RAG vs. Fine-tuning",
+              "priority": "P0"
+            },
+            {
+              "name": "Prompt Engineering & Structured Outputs: system/user/tool priority, JSON Schema validation, function/tool calling, handling refusals & long context",
+              "priority": "P1"
+            },
+            {
+              "name": "RAG Pipelines: chunking (fixed/semantic/hierarchical), embeddings, Vector DBs (HNSW, IVF), hybrid search (BM25 + dense), reranking, multi-tenant ACL filtering",
+              "priority": "P0"
+            },
+            {
+              "name": "RAG Evaluation: recall@k, precision@k, MRR, nDCG, faithfulness, groundedness, and citations",
+              "priority": "P0"
+            }
+          ],
+          "resources": [
+            {
+              "title": "Original Repository — Agentic AI, LLM Engineering & AI System Design Checklist",
+              "url": "https://github.com/aasthas2022/SDE-Interview-and-Prep-Roadmap",
+              "type": "Repo"
+            }
+          ],
+          "exercises": [
+            "Build a RAG pipeline with semantic chunking, hybrid search, source citations, and a golden evaluation dataset measuring recall@5 and faithfulness."
+          ],
+          "interviewQuestions": [
+            "How do you decide between Long-Context Prompting, Retrieval-Augmented Generation (RAG), and Fine-Tuning for a domain question-answering system?",
+            "Why does combining sparse keyword search (BM25) with dense vector embeddings (Hybrid Search + Reranking) outperform vector search alone?"
+          ],
+          "interviewRelevance": "Core topic for AI SDE and modern system design rounds.",
+          "completionCriteria": "Can architect, evaluate, and optimize an ACL-aware production RAG pipeline."
+        },
+        {
+          "id": "p9-agentic-ai",
+          "phaseId": "phase-9",
+          "title": "Agentic Workflows, Multi-Agent Systems, Safety & AI System Design",
+          "priority": "Optional / Advanced",
+          "priorityCode": "P2",
+          "difficulty": "Advanced",
+          "estimatedHours": 16,
+          "originalSection": "1. Agentic AI / 11. Security (LLM) / 14. Testing & Reliability (LLM)",
+          "summary": "Covers core agent loops (ReAct), workflows vs. autonomous agents, LangGraph/checkpointing, MCP & tool contracts, memory management, multi-agent coordination, LLM-as-judge evaluation, prompt injection defense, and agentic system design case studies.",
+          "whyImportant": "Prepares engineers for cutting-edge Agentic AI system design interviews, covering reliability, cost/latency budgets, and safety guardrails.",
+          "prerequisites": [
+            "p7-observability-sre",
+            "p9-llm-rag"
+          ],
+          "unlocks": [],
+          "subtopics": [
+            {
+              "name": "Agent Fundamentals: observe-decide-act loop, ReAct, deterministic workflows vs. autonomous agents, human-in-the-loop approvals, turn budgets",
+              "priority": "P0"
+            },
+            {
+              "name": "Orchestration & State: LangGraph state graphs, checkpointing, durable execution, short-term vs. episodic/semantic memory, context compaction",
+              "priority": "P1"
+            },
+            {
+              "name": "Tool Use & Multi-Agent Systems: MCP protocol, idempotent tools, parallel tool execution, supervisor/worker vs. single-agent trade-offs",
+              "priority": "P1"
+            },
+            {
+              "name": "Evaluation, Reliability & Security: trajectory tests, LLM-as-judge calibration, prompt/response caching, token cost/p95 latency budgets, prompt injection & sandboxing",
+              "priority": "P0"
+            },
+            {
+              "name": "Agentic System Design Practice: code-review agent, customer-support agent with handoff, document research agent, incident-response assistant",
+              "priority": "P0"
+            }
+          ],
+          "resources": [
+            {
+              "title": "Original Repository — Agentic System Design Interview Practice",
+              "url": "https://github.com/aasthas2022/SDE-Interview-and-Prep-Roadmap",
+              "type": "Repo"
+            }
+          ],
+          "exercises": [
+            "Build a stateful tool-calling agent with schema validation, persistent checkpointing, retry backoff, and human approval gates for write actions."
+          ],
+          "interviewQuestions": [
+            "When should you build a deterministic pipeline/workflow instead of an autonomous LLM agent, and how do you enforce safety on write/side-effect tools?",
+            "How do you defend an agent with database/email tool access against indirect prompt injection embedded in untrusted documents?"
+          ],
+          "interviewRelevance": "Directly targets Agentic AI and LLM System Design interview loops.",
+          "completionCriteria": "Can whiteboard an end-to-end agentic architecture with token/latency math, evaluation rubrics, and security boundaries."
+        }
+      ]
+    }
+  ]
+}
